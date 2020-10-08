@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Cleaning database ... "
 
+puts "Destroy Ingredients ... "
+Ingredient.Destroy_all
+
 puts "Creating Ingredients"
 
 require 'json'
