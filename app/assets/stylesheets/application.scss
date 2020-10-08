@@ -25,11 +25,11 @@ html, body {
 
 .main {
   min-height: 100%;
-  margin-bottom: -100px;
+  margin-bottom: -300px;
 }
 
 .push, .footer {
-  height: 100px;
+  height: 300px;
 }
 
 // Font-size
@@ -41,8 +41,13 @@ h2 {
   font-size: 48px;
 }
 
+
+h1, h2 {
+  text-transform: capitalize;
+}
 h3 {
   font-size: 32px;
+  text-transform: uppercase;
 }
 
 p {
@@ -50,10 +55,31 @@ p {
 }
 
 // Colors
-h1, h1, h3 {
-  color: $headers;
+h1, h2, h3 {
+  color: $dark-grey;
 }
 
 p {
-  color: $text;
+  color: $medium-grey;
+}
+
+.red-bg li, .red-bg h2, .red-bg h3 {
+  color: white;
+}
+
+.grey-bg li {
+  color: $medium-grey;
+}
+
+// style
+li {
+  list-style: none;
+}
+
+i {
+  padding: 8px;
+}
+
+.text-center {
+  text-align: center;
 }

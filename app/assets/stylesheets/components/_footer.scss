@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.first-footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.second-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.first-footer-social-links ul {
+  display: flex;
+}
+
+
