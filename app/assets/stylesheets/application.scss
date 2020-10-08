@@ -11,3 +11,16 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+html, body {
+  height: 100%;
+}
+
+.main {
+  min-height: 100%;
+  margin-bottom: -100px;
+}
+
+.push, .footer {
+  height: 100px;
+}
