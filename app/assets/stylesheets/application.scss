@@ -12,6 +12,13 @@
 @import "components/index";
 @import "pages/index";
 
+// Layout
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html, body {
   height: 100%;
 }
@@ -23,4 +30,30 @@ html, body {
 
 .push, .footer {
   height: 100px;
+}
+
+// Font-size
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 16px;
+}
+
+// Colors
+h1, h1, h3 {
+  color: $headers;
+}
+
+p {
+  color: $text;
 }
