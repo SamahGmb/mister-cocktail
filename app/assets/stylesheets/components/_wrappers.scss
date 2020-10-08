@@ -1,0 +1,21 @@
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 960px) {
+  .wrapper {
+    width: 800px;
+  }
+}
+@media (max-width: 720px) {
+  .wrapper {
+    width: 600px;
+  }
+}
+@media (max-width: 540px) {
+  .wrapper {
+    width: 400px;
+    margin: 0 auto;
+  }
+}
