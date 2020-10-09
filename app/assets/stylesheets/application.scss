@@ -44,8 +44,14 @@ h2 {
 h1, h2 {
   text-transform: capitalize;
 }
+
 h3 {
   font-size: 32px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 24px;
   text-transform: uppercase;
 }
 
@@ -54,7 +60,7 @@ p {
 }
 
 // Colors
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: $dark-grey;
 }
 
@@ -62,7 +68,7 @@ p {
   color: $medium-grey;
 }
 
-.red-bg h2, .red-bg h3, .red-bg li {
+.red-bg h2, .red-bg h3, .red-bg h4, .red-bg li, .red-bg a {
   color: white;
 }
 
@@ -71,6 +77,11 @@ p {
 }
 
 // style
+
+a {
+  text-decoration: none !important;
+}
+
 li {
   list-style: none;
 }

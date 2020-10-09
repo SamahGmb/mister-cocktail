@@ -1,0 +1,12 @@
+.cocktail-card {
+  margin: 16px;
+  box-shadow: 2px 4px 4px 2px $shadow;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.cocktail-card-title {
+  padding: 16px 24px;
+}
