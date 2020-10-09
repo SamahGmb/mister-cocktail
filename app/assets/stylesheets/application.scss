@@ -41,7 +41,6 @@ h2 {
   font-size: 48px;
 }
 
-
 h1, h2 {
   text-transform: capitalize;
 }
@@ -63,11 +62,11 @@ p {
   color: $medium-grey;
 }
 
-.red-bg li, .red-bg h2, .red-bg h3 {
+.red-bg h2, .red-bg h3, .red-bg li {
   color: white;
 }
 
-.grey-bg li {
+.grey-bg p, .grey-bg li, .grey-bg a, .grey-bg i {
   color: $medium-grey;
 }
 
