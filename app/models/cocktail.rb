@@ -3,4 +3,5 @@ class Cocktail < ApplicationRecord
   has_many :ingredients, through: :doses
 
   validates :name, presence: true, uniqueness: true
+  validates :description, presence: { allow_blank: true }
 end
