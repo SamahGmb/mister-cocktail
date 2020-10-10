@@ -15,6 +15,9 @@ Cocktail.delete_all
 puts "Destroy Ingredients ... "
 Ingredient.delete_all
 
+puts "Destroy Doses ... "
+Dose.delete_all
+
 puts "Creating Ingredients ..."
 
 require 'json'
@@ -28,7 +31,7 @@ ingredients["drinks"].each do |ingredient|
   Ingredient.create!(name:"#{ingredient["strIngredient1"]}")
 end
 
-puts "Ingedients created!"
+puts "Ingedients OK!"
 
 puts "Creating Cocktails ... "
 
@@ -43,7 +46,20 @@ californication = Cocktail.create!(name:'Californication', description:"Californ
 long_island_iced_tea = Cocktail.create!(name:'Long Island Iced Tea', description:"A cocktail that never seems to go out of style. The potent concoction of rum, tequila, vodka, gin and triple sec finished with a mixture of sweet and sour cola and lemon juice. Tea isn't actually an addition to the drink, but the ingredients used predominantly the cola, provide the profile of tea with much more flavour.")
 apple_martini = Cocktail.create!(name:'Apple Martini', description:"The Apple Martini or “Appletini” adds a twist to the typical dry martini. Vodka is used as opposed to gin as the basis of the cocktail and apple schnapps is added for a sweet but slightly sour twist. The cocktail is usually finished with lemon juice and garnished with a slice of apple, simple but tasty.")
 
-puts "Cocktails created!"
+puts "Cocktails OK!"
+
+puts "Creating Doses ... "
+
+caipirinha_rum = Dose.create!(cocktail:caipirinha, ingredient_id:40, amount:2, unit:"oz")
+caipirinha_lime = Dose.create!(cocktail:caipirinha, ingredient_id:56, amount:1, unit:"unit")
+caipirinha_sugar = Dose.create!(cocktail:caipirinha, ingredient_id:25, amount:1, unit:"tsp")
+
+pina_colada_rum = Dose.create!(cocktail:pina_colada, ingredient_id:40, amount:2, unit:"oz")
+pina_colada_pineapple_juice = Dose.create!(cocktail:pina_colada, ingredient_id:47, amount:2, unit:"oz")
+
+puts "Doses OK!"
+
+puts "OK!"
 
 # Ingedients
 

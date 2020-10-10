@@ -8,7 +8,11 @@
         <p><%= @cocktail.description %></p>
       </div>
       <div class="cocktail-card-details-ingredients">
-
+        <% @cocktail.doses.each do |dose| %>
+          <ul>
+            <li><i class="far fa-square"></i> <%= dose.amount %> <%= dose.unit %> <%= dose.ingredient.name %></li>
+          </ul>
+        <% end %>
       </div>
       <div class="cocktail-card-details-steps">
 
