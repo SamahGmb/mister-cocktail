@@ -1,5 +1,10 @@
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.submit %>
-<% end %>
+<div class="wrapper">
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.submit %>
+  <% end %>
+  <%= link_to cocktails_path do%>
+    <i class="far fa-arrow-alt-circle-left"></i>
+  <% end %>
+</div>
