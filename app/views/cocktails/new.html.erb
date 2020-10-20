@@ -4,13 +4,15 @@
 <div class="wrapper">
   <div class="cocktail-card">
     <div class="cocktail-card-title">
-      <h1>Create Your Own Cocktail</h1>
+      <h1 class="text-center" >Create Your Own Cocktail</h1>
     </div>
     <div class="cocktail-card-details">
       <%= simple_form_for(@cocktail) do |f| %>
-        <%= f.input :name %>
-        <%= f.input :description %>
-        <%= f.submit %>
+        <%= f.input :name, :label => 'Cocktail Name', :placeholder => "My Red berry Mojito" %>
+        <%= f.input :description, :label => 'Cocktail Description', :placeholder => "With Raspberries, Lime and Mint.", :hint => 'Description is Optional!', :required => false %>
+        <hr>
+        <%= f.button :submit, class: "btn-danger" %>
+        <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
       <% end %>
     </div>
   </div>
