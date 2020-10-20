@@ -72,8 +72,12 @@ p, li {
   color: white;
 }
 
+.black-bg h2, .black-bg h3, .black-bg h4, .black-bg li, .black-bg a {
+  color: white;
+}
+
 .grey-bg p, .grey-bg li, .grey-bg a, .grey-bg i {
-  color: $medium-grey;
+  color: $light-gray;
 }
 
 // style
