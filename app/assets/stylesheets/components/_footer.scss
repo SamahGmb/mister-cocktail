@@ -1,23 +1,20 @@
 .footer {
   display: flex;
   flex-direction: column;
+  margin-top: 16px;
 }
 
-.first-footer {
+.first-footer, .second-footer {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-}
-
-.second-footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
+  padding: 16px;
 }
 
 .first-footer-social-links ul {
   display: flex;
 }
+
+
 
 
