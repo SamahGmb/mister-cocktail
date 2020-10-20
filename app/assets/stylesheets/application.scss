@@ -41,22 +41,24 @@ h2 {
   font-size: 48px;
 }
 
-h1, h2 {
-  text-transform: capitalize;
-}
-
 h3 {
   font-size: 32px;
-  text-transform: uppercase;
 }
 
 h4 {
   font-size: 24px;
-  text-transform: uppercase;
 }
 
 p {
   font-size: 16px;
+}
+
+.small-p {
+  font-size: 12px;
+}
+
+i {
+  font-size: 32px;
 }
 
 // Colors
@@ -66,6 +68,10 @@ h1, h2, h3, h4, a {
 
 p, li {
   color: $medium-grey;
+}
+
+i {
+  color: $primary-color;
 }
 
 .red-bg h2, .red-bg h3, .red-bg h4, .red-bg li, .red-bg a {
@@ -81,6 +87,14 @@ p, li {
 }
 
 // style
+
+h1, h2, li, p::first-letter {
+  text-transform: capitalize;
+}
+
+h3, h4 {
+  text-transform: uppercase;
+}
 
 a {
   text-decoration: none !important;
