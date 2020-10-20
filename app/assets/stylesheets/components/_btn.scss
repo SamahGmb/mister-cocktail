@@ -1,3 +1,27 @@
+.cta p {
+  background-color: $primary-color;
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: white;
+}
+
+.cta p:hover {
+  background-color: white;
+  color: $primary-color;
+}
+
+.btn-sec p {
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: $dark-grey;
+}
+
+.btn-sec p:hover {
+  background-color: $dark-grey;
+  color: white;
+}
+
 .btn-back {
   font-size: 32px;
 }
