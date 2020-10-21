@@ -1,15 +1,16 @@
 <div class="banner">
-  <%= image_tag "banner-new-cocktail.svg" %>
+  <%= image_tag "banner-new-dose.svg" %>
 </div>
 <div class="wrapper">
   <div class="cocktail-card">
     <div class="cocktail-card-title">
-      <h1 class="text-center" >create your own cocktail</h1>
+      <h1 class="text-center">add ingredients</h1>
     </div>
     <div class="cocktail-card-details">
-      <%= simple_form_for(@cocktail) do |f| %>
-        <%= f.input :name, :label => 'Cocktail Name', :placeholder => "My Red berry Mojito" %>
-        <%= f.input :description, :label => 'Cocktail Description', :placeholder => "With Raspberries, Lime and Mint.", :hint => 'Description is Optional!', :required => false %>
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.association :ingredient, :label => 'Choose an Ingredient' %>
+        <%= f.input :amount %>
+        <%= f.input :unit, collection: ['oz','cup','tsp','slice','unit'], selected: 'oz' %>
         <hr>
         <%= f.button :submit, class: "btn-danger" %>
         <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
@@ -17,7 +18,7 @@
     </div>
   </div>
   <div class="btn-back">
-    <%= link_to root_path do%>
+    <%= link_to cocktail_path(@cocktail) do%>
       <i class="far fa-arrow-alt-circle-left" ></i>
     <% end %>
   </div>

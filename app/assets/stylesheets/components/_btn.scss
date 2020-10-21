@@ -6,8 +6,8 @@
 }
 
 .cta p:hover {
-  background-color: white;
-  color: $primary-color;
+  background-color: $dark-grey;
+  color: white;
 }
 
 .btn-sec p {
@@ -24,4 +24,8 @@
 
 .btn-back {
   font-size: 32px;
+}
+
+.btn-lg {
+  width: 300px;
 }

@@ -37,6 +37,12 @@ h1 {
   font-size: 64px;
 }
 
+@media (max-width: 576px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
 h2 {
   font-size: 48px;
 }
@@ -46,7 +52,7 @@ h3 {
 }
 
 h4 {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 p {
@@ -64,6 +70,11 @@ p {
 i {
   font-size: 32px;
 }
+
+.small-icone {
+  font-size: 24px;
+}
+
 
 // Colors
 h1, h2, h3, h4, a {
@@ -114,4 +125,18 @@ i {
 
 .text-center {
   text-align: center;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.space-btw {
+  display:flex;
+  justify-content: space-between;
 }
