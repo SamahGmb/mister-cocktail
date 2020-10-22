@@ -9,11 +9,6 @@
           <div>
             <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
           </div>
-          <div>
-            <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
-              <i class="far fa-trash-alt small-icone "></i>
-            <% end %>
-          </div>
         </div>
       </div>
     <% end %>
