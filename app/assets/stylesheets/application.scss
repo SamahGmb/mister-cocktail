@@ -139,4 +139,11 @@ i {
 .space-btw {
   display:flex;
   justify-content: space-between;
+  align-items: baseline;
+}
+
+.space-arnd {
+  display:flex;
+  justify-content: space-around;
+  align-items: baseline;
 }
