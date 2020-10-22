@@ -16,6 +16,7 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = Cocktail.new(cocktail_params)
+    @cocktail.user = current_user
     @cocktail.save!
 
     redirect_to cocktail_path(@cocktail)
@@ -25,6 +26,10 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.find(params[:id])
     @cocktail.destroy
     redirect_to root_path
+  end
+
+  def my_cocktails
+    @cocktails = Cocktail.where(user:current_user)
   end
 
   private
