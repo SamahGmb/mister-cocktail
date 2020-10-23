@@ -4,13 +4,15 @@
 <div class="wrapper">
   <div class="cocktails-cards">
     <% @cocktails.each do |cocktail| %>
-      <div class="cocktail-card">
-        <div class="cocktail-card-title space-btw ">
-          <div>
-            <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
+      <% if cocktail.user == @user %>
+        <div class="cocktail-card">
+          <div class="cocktail-card-title">
+              <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
           </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 </div>
+
+
