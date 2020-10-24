@@ -1,15 +1,17 @@
 <div class="wrapper">
   <div class="cocktail-card">
     <div class="cocktail-card-title">
-      <h1><%= @cocktail.name %></h1>
+      <h1 class="text-center" ><%= @cocktail.name %></h1>
     </div>
     <div class="cocktail-card-details">
       <div class="cocktail-card-details-description">
+        <h2>description</h2>
         <p><%= @cocktail.description %></p>
       </div>
       <div class="cocktail-card-details-ingredients">
+        <h2>ingredients</h2>
         <% @cocktail.doses.each do |dose| %>
-          <ul class="space-btw" >
+          <ul class="space-btw">
             <li>
               <i class="far fa-square small-icone "></i> <span class="bold-text" > <%= dose.ingredient.name %> </span> <%= dose.amount %> <%= dose.unit %>
             </li>

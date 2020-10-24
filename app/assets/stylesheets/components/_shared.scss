@@ -1,0 +1,158 @@
+// Layout
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.main {
+  min-height: 100%;
+  margin-bottom: -300px;
+}
+
+.push, .footer {
+  height: 300px;
+}
+
+// Font-size
+
+h1 {
+  font-size: 64px;
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 56px;
+  }
+}
+
+h2 {
+  font-size: 48px;
+}
+
+@media (max-width: 576px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+
+h3 {
+  font-size: 32px;
+}
+
+@media (max-width: 576px) {
+  h3 {
+    font-size: 24px;
+  }
+}
+
+h4 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.medium-text {
+  font-size: 14px;
+}
+
+.small-text {
+  font-size: 12px;
+}
+
+i {
+  font-size: 32px;
+}
+
+.small-icone {
+  font-size: 24px;
+}
+
+
+// Colors
+
+h1, h2, h3, h4, a {
+  color: $dark-grey;
+}
+
+p, li {
+  color: $medium-grey;
+}
+
+i {
+  color: $primary-color;
+}
+
+.red-bg h2, .red-bg h3, .red-bg h4, .red-bg li, .red-bg a {
+  color: white;
+}
+
+.black-bg h2, .black-bg h3, .black-bg h4, .black-bg li, .black-bg a {
+  color: white;
+}
+
+.grey-bg p, .grey-bg li, .grey-bg a, .grey-bg i {
+  color: $light-gray;
+}
+
+// style
+
+h1, h2, li, p::first-letter {
+  text-transform: capitalize;
+}
+
+h3, h4 {
+  text-transform: uppercase;
+  padding-top: 16px;
+}
+
+h4 a:hover {
+  color: $primary-color;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+li {
+  list-style: none;
+}
+
+i {
+  padding: 8px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.space-btw {
+  display:flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.space-arnd {
+  display:flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.relative {
+  position: relative;
+}
