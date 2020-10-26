@@ -71,7 +71,7 @@ i {
 }
 
 .small-icone {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 
@@ -146,22 +146,27 @@ i {
 }
 
 .space-btw {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: baseline;
+  flex-wrap: wrap;
 }
 
 .space-arnd {
-  display:flex;
+  display: flex;
   justify-content: space-around;
   align-items: baseline;
+  flex-wrap: wrap;
 }
 
 .flex {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .relative {
   position: relative;
 }
+
+

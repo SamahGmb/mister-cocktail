@@ -1,6 +1,6 @@
 .cocktail-card {
   margin: 16px;
-  padding: 16px;
+  padding: 8px;
   box-shadow: 2px 4px 4px 2px $shadow;
   border-radius: 4px;
   display: flex;
@@ -9,5 +9,10 @@
 }
 
 .cocktail-card-title, .cocktail-card-details {
-  padding: 16px 24px;
+  padding: 8px;
+}
+
+.cocktail-card-details-description, .cocktail-card-details-ingredients, .cocktail-card-details-steps {
+  padding: 8px;
+  width: 350px;
 }

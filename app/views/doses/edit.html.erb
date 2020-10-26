@@ -10,7 +10,7 @@
       <%= simple_form_for (@dose) do |f| %>
         <%= f.association :ingredient, :label => 'Choose an Ingredient' %>
         <%= f.input :amount %>
-        <%= f.input :unit, collection: ['oz','cup','tsp','slice','unit'], selected: 'oz' %>
+        <%= f.input :unit, collection: ['ml','slice','unit'], selected: 'ml' %>
         <hr>
         <%= f.button :submit, 'Add' ,class: "btn-danger" %>
         <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
