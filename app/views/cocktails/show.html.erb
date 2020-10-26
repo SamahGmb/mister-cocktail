@@ -3,7 +3,7 @@
     <div class="cocktail-card-title">
       <h1 class="text-center" ><%= @cocktail.name %></h1>
     </div>
-    <div class="cocktail-card-details">
+    <div class="cocktail-card-details space-btw">
       <div class="cocktail-card-details-description">
         <h2>description</h2>
         <p><%= @cocktail.description %></p>
@@ -14,7 +14,7 @@
           <ul class="flex">
             <li class="flex">
               <div>
-                <i class="fas fa-caret-right"></i>
+                <i class="fas fa-caret-right small-icone "></i>
               </div>
               <div class="padding-right">
                 <span class="bold-text"> <%= dose.ingredient.name %> </span> |
@@ -35,17 +35,18 @@
             </li>
           </ul>
         <% end %>
+        <div class="center">
+          <div class="cta btn-lg">
+            <%= link_to new_cocktail_dose_path(@cocktail) do %>
+              <p class="text-center" >Add an Ingredient</p>
+            <% end %>
+          </div>
+        </div>
       </div>
       <div class="cocktail-card-details-steps">
-
+        <h2>steps</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum ullam nulla ipsum, fugiat repudiandae sapiente suscipit molestiae est a iure sint saepe sed perspiciatis aliquam, iste beatae cumque nesciunt illo.</p>
       </div>
-    </div>
-  </div>
-  <div class="center">
-    <div class="cta btn-lg">
-      <%= link_to new_cocktail_dose_path(@cocktail) do %>
-        <p class="text-center" >Add an Ingredient</p>
-      <% end %>
     </div>
   </div>
   <div class="btn-back">

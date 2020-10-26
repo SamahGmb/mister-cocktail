@@ -4,5 +4,5 @@ class Dose < ApplicationRecord
 
   validates :amount, :unit, :cocktail_id, :ingredient_id, presence:true
   validates :cocktail_id, uniqueness: { scope: :ingredient_id }
-  validates :unit, inclusion: { in: %w(oz cup tsp slice unit), message: "%(value) is not valid unit! Must be oz, cup, tsp, slice or unit" }
+  validates :unit, inclusion: { in: %w(ml slice unit), message: "%(value) is not valid unit! Must be ml, slice or unit" }
 end
