@@ -1,24 +1,24 @@
 <div class="banner">
-  <%= image_tag "banner-new-dose.jpg" %>
+  <%= image_tag "banner-manage-ingdts.jpg" %>
 </div>
 <div class="wrapper">
   <div class="cocktail-card">
     <div class="cocktail-card-title">
-      <h1 class="text-center">add ingredients</h1>
+      <h1 class="text-center">manage your ingredients</h1>
     </div>
     <div class="cocktail-card-details">
-      <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= simple_form_for (@dose) do |f| %>
         <%= f.association :ingredient, :label => 'Choose an Ingredient' %>
         <%= f.input :amount %>
         <%= f.input :unit, collection: ['oz','cup','tsp','slice','unit'], selected: 'oz' %>
         <hr>
-        <%= f.button :submit, 'Create' ,class: "btn-danger" %>
+        <%= f.button :submit, 'Add' ,class: "btn-danger" %>
         <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
       <% end %>
     </div>
   </div>
   <div class="btn-back">
-    <%= link_to cocktail_path(@cocktail) do%>
+    <%= link_to cocktail_path(@dose.cocktail) do%>
       <i class="far fa-arrow-alt-circle-left" ></i>
     <% end %>
   </div>
