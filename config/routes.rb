@@ -9,5 +9,5 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :doses, only: [:destroy]
+  resources :doses, only: [:edit, :update, :destroy]
 end
