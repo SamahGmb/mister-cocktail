@@ -10,15 +10,11 @@
       <%= simple_form_for(@cocktail) do |f| %>
         <%= f.input :name, :label => 'Cocktail Name', :placeholder => "My Red berry Mojito" %>
         <%= f.input :description, :label => 'Cocktail Description', :placeholder => "With Raspberries, Lime and Mint.", :hint => 'Description is Optional!', :required => false %>
+        <%= f.input :photo, as: :file %>
         <hr>
         <%= f.button :submit, class: "btn-danger" %>
         <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
       <% end %>
     </div>
-  </div>
-  <div class="btn-back">
-    <%= link_to root_path do%>
-      <i class="far fa-arrow-alt-circle-left" ></i>
-    <% end %>
   </div>
 </div>

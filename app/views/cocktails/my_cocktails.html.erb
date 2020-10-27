@@ -12,6 +12,15 @@
   <div class="cocktails-cards">
     <% @cocktails.each do |cocktail| %>
       <div class="cocktail-card">
+        <div class="cocktail-card-img" >
+          <%= link_to cocktail_path(cocktail) do %>
+            <% if cocktail.photo.attached? %>
+              <%= cl_image_tag cocktail.photo.key, height: 350, width: 350, crop: :fill, radius:4 %>
+            <% else %>
+              <%= image_tag 'cocktail-default-image.png', height: 350, width: 350 %>
+            <% end %>
+          <% end %>
+        </div>
         <div class="cocktail-card-title space-btw ">
           <div>
             <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>

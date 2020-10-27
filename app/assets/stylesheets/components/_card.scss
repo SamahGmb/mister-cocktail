@@ -1,6 +1,5 @@
 .cocktail-card {
   margin: 16px;
-  padding: 8px;
   box-shadow: 2px 4px 4px 2px $shadow;
   border-radius: 4px;
   display: flex;
@@ -8,11 +7,15 @@
   background-color: white;
 }
 
+.cocktail-card-img img, .cocktail-card-details-img img {
+  width: 100%;
+}
+
 .cocktail-card-title, .cocktail-card-details {
   padding: 8px;
 }
 
-.cocktail-card-details-description, .cocktail-card-details-ingredients, .cocktail-card-details-steps {
+.cocktail-card-details-img, .cocktail-card-details-description, .cocktail-card-details-ingredients {
   padding: 8px;
   width: 350px;
 }

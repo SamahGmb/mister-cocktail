@@ -4,6 +4,13 @@
       <h1 class="text-center" ><%= @cocktail.name %></h1>
     </div>
     <div class="cocktail-card-details space-btw">
+      <div class="cocktail-card-details-img" >
+        <% if @cocktail.photo.attached? %>
+          <%= cl_image_tag @cocktail.photo.key, height: 350, width: 350, crop: :fill, radius:4 %>
+        <% else %>
+          <%= image_tag 'cocktail-default-image.png', height: 350, width: 350 %>
+        <% end %>
+      </div>
       <div class="cocktail-card-details-description">
         <h2>description</h2>
         <p><%= @cocktail.description %></p>
@@ -47,15 +54,5 @@
           </div>
         <% end %>
       </div>
-      <div class="cocktail-card-details-steps">
-        <h2>steps</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum ullam nulla ipsum, fugiat repudiandae sapiente suscipit molestiae est a iure sint saepe sed perspiciatis aliquam, iste beatae cumque nesciunt illo.</p>
-      </div>
-    </div>
-  </div>
-  <div class="btn-back">
-      <%= link_to root_path do%>
-        <i class="far fa-arrow-alt-circle-left" ></i>
-      <% end %>
   </div>
 </div>
