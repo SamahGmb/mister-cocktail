@@ -8,6 +8,7 @@ class CocktailsController < ApplicationController
   end
 
   def show
+    @user = current_user
     @cocktail = Cocktail.find(params[:id])
   end
 
