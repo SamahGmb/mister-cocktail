@@ -1,4 +1,41 @@
-<div class="wrapper">
+<div class="banner">
+  <h1>welcome,</h1>
+  <p>tasty & delicious cocktails at home ! </p>
+</div>
+<div class="flex-wrap" >
+  <div class="bg-main-color-side padding-section" >
+    <div>
+      <h1 class="text-center"><%= @cocktail.name %></h1>
+      <p><%= @cocktail.description %></p>
+    </div>
+    <div>
+      <% @cocktail.doses.each do |dose| %>
+        <ul>
+          <li class="flex">
+            <div class="padding-right" >
+              <i class="fas fa-caret-right small-icone"></i><i class="fas fa-caret-right small-icone"></i>
+            </div>
+            <div class="padding-right" >
+              <span class="bold-text"> <%= dose.amount %> <%= dose.unit %></span>
+            </div>
+            <div class="padding-right">
+             <%= dose.ingredient.name %>
+            </div>
+          </li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+  <div class="cocktail-img" >
+    <% if @cocktail.photo.attached? %>
+      <%= cl_image_tag @cocktail.photo.key, crop: :fill %>
+    <% else %>
+      <%= image_tag 'cocktail-default-image.png' %>
+    <% end %>
+  </div>
+</div>
+
+<!-- <div class="wrapper">
   <div class="cocktail-card">
     <div class="cocktail-card-title">
       <h1 class="text-center" ><%= @cocktail.name %></h1>
@@ -55,4 +92,4 @@
         <% end %>
       </div>
   </div>
-</div>
+</div> -->

@@ -1,31 +1,53 @@
-<div class="banner">
-  <div class="relative" >
-    <%= image_tag "banner-home.jpg" %>
-    <h1>captain cocktail</h1>
-  </div>
+<div class="banner radius-bottom ">
+  <h1>welcome,</h1>
+  <p>tasty & delicious cocktails at home ! </p>
 </div>
 <div class="wrapper">
-  <h2>famous cocktails</h2>
-  <div class="cocktails-cards">
-    <% @cocktails.each do |cocktail| %>
-      <% if cocktail.user == @user %>
-        <div class="cocktail-card">
-          <div class="cocktail-card-img" >
-            <%= link_to cocktail_path(cocktail) do %>
-              <% if cocktail.photo.attached? %>
-                <%= cl_image_tag cocktail.photo.key, height: 350, width: 350, crop: :fill, radius:4 %>
-              <% else %>
-                <%= image_tag 'cocktail-default-image.png', height: 350, width: 350 %>
-              <% end %>
-            <% end %>
+  <div class="padding-section-index">
+    <h2>cocktails by categories</h2>
+      <div class="cocktails-categories">
+        <div class="cocktail-category bg-green ">
+          <div>
+            <i class="fas fa-ban"></i>
           </div>
-          <div class="cocktail-card-title">
-              <h4 class="text-center" ><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
+          <div>
+            <h4 class="text-center">without alcohol</h4>
           </div>
         </div>
+        <div class="cocktail-category bg-orange ">
+          <div>
+            <i class="fas fa-wine-bottle"></i>
+          </div>
+          <div>
+            <h4 class="text-center" >with alcohol </h4>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="padding-section-index">
+    <h2>famous cocktails</h2>
+    <div class="cocktails-cards">
+      <% @cocktails.each do |cocktail| %>
+        <% if cocktail.user == @user %>
+          <div class="cocktail-card relative ">
+            <div class="cocktail_card-img" >
+              <%= link_to cocktail_path(cocktail) do %>
+                <% if cocktail.photo.attached? %>
+                  <%= cl_image_tag cocktail.photo.key %>
+                <% else %>
+                  <%= image_tag 'cocktail-default-image.png' %>
+                <% end %>
+              <% end %>
+            </div>
+            <div class="cocktail-card-name" >
+              <h3 class="text-center" ><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
+            </div>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
+
 
 
