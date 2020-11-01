@@ -1,15 +1,10 @@
 .banner {
-  margin-bottom: 16px;
+  // margin-bottom: 16px;
+  background-color: $main-color;
+  height: 30vh;
+  padding: 80px;
 }
 
-.banner img {
-  width: 100%;
-}
-
-.relative h1 {
-  position: absolute;
-  top: 50%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
+// .home-banner img {
+//   width: 100%;
+// }
