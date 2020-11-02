@@ -17,7 +17,7 @@ Ingredient.delete_all
 puts "Destroy Doses ... "
 Dose.delete_all
 
-puts "Destroy Doses ... "
+puts "Destroy Category ... "
 Category.delete_all
 
 puts "Destroy Users ... "
