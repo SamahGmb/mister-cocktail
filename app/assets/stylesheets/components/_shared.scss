@@ -26,20 +26,25 @@ h1, h2, h3, a, p {
 
 // Flex
 
-.flex {
-  display: flex;
-}
+// .flex {
+//   display: flex;
+// }
 
 .flex-wrap {
   display: flex;
   flex-wrap: wrap
 }
 
-// .flex-center {
+// .flex-column {
 //   display: flex;
-//   justify-content: center;
-//   align-items: center;
+//   flex-direction: column;
 // }
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 // Font
 
@@ -151,13 +156,17 @@ html, body {
 //   text-transform: uppercase;
 // }
 
-h2 {
+h2, h3 {
   text-transform: capitalize;
 }
 
+h3 {
+  font-weight: bold;
+}
 p::first-letter {
   text-transform: uppercase;
 }
+
 
 // h3, h4 {
 //   text-transform: uppercase;

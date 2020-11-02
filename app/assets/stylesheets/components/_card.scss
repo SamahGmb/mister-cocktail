@@ -1,34 +1,9 @@
 // Index Card
 
-.cocktail-card {
-  box-shadow: 2px 4px 4px 2px $shadow;
-  border-radius: 16px;
-  height: 150px;
-  margin: 32px;
-  display: flex;
-  align-items: center;
-  background-color: white;
-}
-
-.cocktail-card img {
-  border-radius: 50%;
-  height: 170px;
-  width: 170px;
-}
-
-.cocktail_card-img {
-  position: absolute;
-  left: -48px;
-}
-
-.cocktail-card-name h3 {
-  padding-left: 150px;
-}
-
 .cocktail-category {
   box-shadow: 2px 4px 4px 2px $shadow;
   background-color: white;
-  border-radius: 16px;
+  border-radius: 40px;
   height: 150px;
   width: 150px;
   margin: 8px;
@@ -44,7 +19,79 @@
   padding: 16px;
 }
 
+.cocktail-card {
+  box-shadow: 2px 4px 4px 2px $shadow;
+  border-radius: 8px;
+  height: 100px;
+  margin: 16px 32px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.cocktail-card img {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+}
+
+.cocktail_card-img {
+  position: absolute;
+  left: -48px;
+}
+
+.cocktail-card-name h3 {
+  padding-left: 150px;
+}
+
+.cocktail-card-name h3 a:hover {
+  color: $main-color;
+}
+
 // Show Card
+
+.cocktail-infos {
+  width: 50%;
+  background-color: white;
+  border-radius: 40px 0 0 0;
+}
+
+@media (min-width: 960px) {
+  .cocktail-infos {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 960px) {
+  .cocktail-infos {
+    width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .cocktail-infos {
+    border-radius: 40px 40px 0 0;
+  }
+}
+
+.cocktail-infos p {
+  padding: 40px 0;
+  line-height: 2;
+  letter-spacing: 0.1em;
+}
+
+.cocktail-infos-igdts {
+  border: 2px solid $main-color;
+  border-radius: 40px;
+  padding: 16px;
+  width: 150px;
+  height: 150px;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .cocktail-img {
   width: 50%;
@@ -68,19 +115,14 @@
   height: 100%;
   padding: 0;
   margin: 0;
-  border-radius: 40px;
+  border-radius: 0 40px 0 0;
 }
 
 @media (max-width: 540px) {
   .cocktail-img img {
     height: 50vh;
+    border-radius: 0;
   }
-}
-
-.bg-main-color-side p {
-  padding: 40px 0;
-  line-height: 2;
-  letter-spacing: 0.1em;
 }
 
 // .cocktail-card-img img, .cocktail-card-details-img img {

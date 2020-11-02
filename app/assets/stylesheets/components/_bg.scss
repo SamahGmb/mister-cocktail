@@ -1,18 +1,5 @@
-.bg-main-color-side {
+.bg-main-color {
   background-color: $main-color;
-  width: 50%;
-}
-
-@media (min-width: 960px) {
-  .bg-main-color-side {
-    height: 100vh;
-  }
-}
-
-@media (max-width: 960px) {
-  .bg-main-color-side {
-    width: 100%;
-  }
 }
 
 // .red-bg {
