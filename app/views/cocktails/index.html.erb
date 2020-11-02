@@ -6,22 +6,32 @@
   <div class="padding-section-index">
     <h3>cocktails by categories</h3>
       <div class="cocktails-categories">
-        <div class="cocktail-category bg-green ">
-          <div>
-            <i class="fas fa-ban"></i>
+        <% @categories.each do |category, cocktail| %>
+          <div class="cocktail-category">
+            <button type="button" data-toggle="modal" data-target="#category<%= category.id %>">
+              <h4 class="text-center"><%= category.name %></h4>
+            </button>
+            <div class="modal fade" id="category<%= category.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLongTitle"><%= category.name %></h4>
+                  </div>
+                  <div class="modal-body">
+                    <% category.cocktails.each do |cocktail| %>
+                      <ul class="fa-ul">
+                        <p><li><span class="fa-li"><i class="fas fa-chevron-circle-right"></i></span><%= link_to cocktail.name, cocktail_path(cocktail) %></li></p>
+                      </ul>
+                    <% end %>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" data-dismiss="modal"> X </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <h4 class="text-center">without alcohol</h4>
-          </div>
-        </div>
-        <div class="cocktail-category bg-orange ">
-          <div>
-            <i class="fas fa-wine-bottle"></i>
-          </div>
-          <div>
-            <h4 class="text-center" >with alcohol </h4>
-          </div>
-        </div>
+        <% end %>
       </div>
   </div>
   <div class="padding-section-index">
@@ -48,6 +58,3 @@
     </div>
   </div>
 </div>
-
-
-

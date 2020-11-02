@@ -1,5 +1,6 @@
 class Cocktail < ApplicationRecord
   belongs_to :user
+  belongs_to :category
   has_many :doses, dependent: :destroy
   has_many :ingredients, through: :doses
 
