@@ -1,9 +1,22 @@
+.home-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.home-banner img {
+  width: 100%;
+  padding: 48px 0;
+}
+
+.sign-in a {
+  color: $main-color;
+}
+
 .banner {
   background-color: $main-color;
   height: 30vh;
   padding: 80px;
 }
-
-// .home-banner img {
-//   width: 100%;
-// }
