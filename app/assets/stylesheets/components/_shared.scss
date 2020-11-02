@@ -120,13 +120,9 @@ html, body {
 
 // Padding / Margin
 
-// h1 {
-//   padding: 16px;
-// }
-
-// h2 {
-//   padding: 16px 0;
-// }
+h3 {
+  padding: 16px 0;
+}
 
 .padding-section-index {
   padding: 16px;
@@ -142,9 +138,6 @@ html, body {
 //   }
 // }
 
-.padding-right {
-  padding-right: 16px;
-}
 
 // img {
 //   margin: 16px;
@@ -156,11 +149,11 @@ html, body {
 //   text-transform: uppercase;
 // }
 
-h2, h3 {
+h2, h3, h4 {
   text-transform: capitalize;
 }
 
-h3 {
+h3, h4 {
   font-weight: bold;
 }
 p::first-letter {
@@ -179,6 +172,15 @@ p::first-letter {
 
 a {
   text-decoration: none !important;
+}
+
+button {
+  border: none;
+  background-color: white;
+}
+
+button:focus {
+  display: none;
 }
 
 // li {

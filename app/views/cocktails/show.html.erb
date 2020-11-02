@@ -14,10 +14,10 @@
         <% @cocktail.doses.each do |dose| %>
           <ul>
             <li class="cocktail-infos-igdts">
-              <div class="padding-right" >
+              <div>
                 <span class="bold-text"> <%= dose.amount %> <%= dose.unit %></span>
               </div>
-              <div class="padding-right text-center ">
+              <div class="text-center ">
                <%= dose.ingredient.name %>
               </div>
             </li>
