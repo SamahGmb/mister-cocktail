@@ -5,6 +5,7 @@ class CocktailsController < ApplicationController
   def index
     @user = User.find(1)
     @cocktails = Cocktail.all
+    @categories = @cocktails.group_by { |cocktail| cocktail.category }
   end
 
   def show
