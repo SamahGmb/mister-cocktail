@@ -1,39 +1,40 @@
-<div class="banner">
-  <h1>welcome,</h1>
-  <p>tasty & delicious cocktails at home ! </p>
-</div>
-<div class="flex-wrap" >
-  <div class="bg-main-color-side padding-section" >
-    <div>
-      <h1 class="text-center"><%= @cocktail.name %></h1>
-      <p><%= @cocktail.description %></p>
+<div class="bg-main-color">
+  <div class="banner">
+    <h3 class="text-center">cocktail recipe</h3>
+    <p class="text-center" >tasty & delicious cocktails at home ! </p>
+  </div>
+  <div class="flex-wrap" >
+    <div class="cocktail-infos padding-section" >
+      <div>
+        <h1 class="text-center"><%= @cocktail.name %></h1>
+        <p><%= @cocktail.description %></p>
+      </div>
+      <h3>ingredients</h3>
+      <div class="flex-wrap flex-center " >
+        <% @cocktail.doses.each do |dose| %>
+          <ul>
+            <li class="cocktail-infos-igdts">
+              <div class="padding-right" >
+                <span class="bold-text"> <%= dose.amount %> <%= dose.unit %></span>
+              </div>
+              <div class="padding-right text-center ">
+               <%= dose.ingredient.name %>
+              </div>
+            </li>
+          </ul>
+        <% end %>
+      </div>
     </div>
-    <div>
-      <% @cocktail.doses.each do |dose| %>
-        <ul>
-          <li class="flex">
-            <div class="padding-right" >
-              <i class="fas fa-caret-right small-icone"></i><i class="fas fa-caret-right small-icone"></i>
-            </div>
-            <div class="padding-right" >
-              <span class="bold-text"> <%= dose.amount %> <%= dose.unit %></span>
-            </div>
-            <div class="padding-right">
-             <%= dose.ingredient.name %>
-            </div>
-          </li>
-        </ul>
+    <div class="cocktail-img" >
+      <% if @cocktail.photo.attached? %>
+        <%= cl_image_tag @cocktail.photo.key, crop: :fill %>
+      <% else %>
+        <%= image_tag 'cocktail-default-image.png' %>
       <% end %>
     </div>
   </div>
-  <div class="cocktail-img" >
-    <% if @cocktail.photo.attached? %>
-      <%= cl_image_tag @cocktail.photo.key, crop: :fill %>
-    <% else %>
-      <%= image_tag 'cocktail-default-image.png' %>
-    <% end %>
-  </div>
 </div>
+
 
 <!-- <div class="wrapper">
   <div class="cocktail-card">
