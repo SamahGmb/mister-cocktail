@@ -4,41 +4,17 @@ h1, h2, h3, a, p {
   color: $dark-grey;
 }
 
-// i {
-//   color: $main-color;
-// }
-
-// .bg-orange {
-//   background-color: #f6d6ce;
-// }
-
-// .bg-pink {
-//   background-color: #fec7e1;
-// }
-
-// .bg-green {
-//   background-color: #d1eac6;
-// }
-
-// .bg-blue {
-//   background-color: #9ADCF0;
-// }
-
 // Flex
-
-// .flex {
-//   display: flex;
-// }
 
 .flex-wrap {
   display: flex;
   flex-wrap: wrap
 }
 
-// .flex-column {
-//   display: flex;
-//   flex-direction: column;
-// }
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
 
 .flex-center {
   display: flex;
@@ -82,22 +58,6 @@ p {
   font-size: 16px;
 }
 
-// .medium-text {
-//   font-size: 14px;
-// }
-
-// .small-text {
-//   font-size: 12px;
-// }
-
-// i {
-//   font-size: 32px;
-// }
-
-// .small-icone {
-//   font-size: 16px;
-// }
-
 // Layout
 
 * {
@@ -120,7 +80,11 @@ html, body {
 
 // Padding / Margin
 
-h3 {
+h1, h3 {
+  padding: 16px 0;
+}
+
+.padding-section-home {
   padding: 16px 0;
 }
 
@@ -132,24 +96,9 @@ h3 {
   padding: 72px;
 }
 
-// @media (max-width: 540px) {
-//   .padding-section {
-//     padding: 32px;
-//   }
-// }
-
-
-// img {
-//   margin: 16px;
-// }
-
 // Style
 
-// h1 {
-//   text-transform: uppercase;
-// }
-
-h2, h3, h4 {
+h1, h2, h3, h4, a {
   text-transform: capitalize;
 }
 
@@ -159,16 +108,6 @@ h3, h4 {
 p::first-letter {
   text-transform: uppercase;
 }
-
-
-// h3, h4 {
-//   text-transform: uppercase;
-//   padding-top: 16px;
-// }
-
-// h4 a:hover {
-//   color: $main-color;
-// }
 
 a {
   text-decoration: none !important;
@@ -182,14 +121,6 @@ button {
 button:focus {
   display: none;
 }
-
-// li {
-//   list-style: none;
-// }
-
-// i {
-//   padding: 8px;
-// }
 
 .bold-text {
   font-weight: bold;
@@ -207,21 +138,6 @@ button:focus {
   border-radius: 40px 40px 0 0;
 }
 
-
-
-// .space-btw {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   flex-wrap: wrap;
-// }
-
-// .space-arnd {
-//   display: flex;
-//   justify-content: space-around;
-//   align-items: baseline;
-//   flex-wrap: wrap;
-// }
 
 
 
