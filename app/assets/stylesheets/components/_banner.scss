@@ -1,9 +1,49 @@
-.banner {
+.home-banner {
+  height: 100vh;
   background: linear-gradient(#fefb01, #cefb02, #87fa00, #3af901);
-  height: 30vh;
-  padding: 80px;
 }
 
-// .home-banner img {
-//   width: 100%;
-// }
+.home-banner-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-banner-title p {
+  letter-spacing: 0.1em;
+}
+
+.home-page-img-btn {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 540px) {
+  .home-page-img-btn {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+.home-page-btn, .home-page-img {
+  width: 100%;
+}
+
+.home-page-btn {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 540px) {
+  .home-page-btn {
+    flex-wrap: wrap;
+  }
+}
+
+.home-page-img img {
+  width: 80%;
+}
+
+.banner {
+  background: linear-gradient(#fefb01, #cefb02, #87fa00, #3af901);
+  padding: 80px;
+  width: 100%;
+}
