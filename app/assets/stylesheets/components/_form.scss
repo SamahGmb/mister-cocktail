@@ -1,0 +1,12 @@
+@media (min-width: 960px) {
+  .cocktail-form {
+    padding: 40px;
+    width: 800px;
+  }
+}
+
+@media (max-width: 540px) {
+  .cocktail-form {
+    padding: 40px 0;
+  }
+}
