@@ -1,20 +1,16 @@
 <div class="banner">
-  <%= image_tag "banner-new-cocktail.jpg" %>
-</div>
+   <h3 class="text-center">create your cocktail</h3>
+   <p class="text-center" >tasty & delicious cocktails at home ! </p>
+ </div>
 <div class="wrapper">
-  <div class="cocktail-card">
-    <div class="cocktail-card-title">
-      <h1 class="text-center" >create your own cocktail</h1>
-    </div>
-    <div class="cocktail-card-details">
-      <%= simple_form_for(@cocktail) do |f| %>
-        <%= f.input :name, :label => 'Cocktail Name', :placeholder => "My Red berry Mojito" %>
-        <%= f.input :description, :label => 'Cocktail Description', :placeholder => "With Raspberries, Lime and Mint.", :hint => 'Description is Optional!', :required => false %>
-        <%= f.input :photo, as: :file %>
-        <hr>
-        <%= f.button :submit, class: "btn-danger" %>
-        <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
-      <% end %>
-    </div>
+  <div class="cocktail-form">
+    <%= simple_form_for(@cocktail) do |f| %>
+      <%= f.input :name, :label => 'Cocktail Name', :placeholder => "My Red berry Mojito" %>
+      <%= f.input :description, :label => 'Cocktail Description', :placeholder => "With Raspberries, Lime and Mint.", :hint => 'Description is Optional!', :required => false %>
+      <%= f.input :photo, as: :file %>
+      <hr>
+      <%= f.button :submit, class: "btn" %>
+      <%= f.button :button, "Cancel", type: "reset", class: "btn" %>
+    <% end %>
   </div>
 </div>
