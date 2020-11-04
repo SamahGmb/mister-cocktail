@@ -53,38 +53,43 @@ prosecco = Ingredient.create!(name:'Prosecco')
 aperol = Ingredient.create!(name:'Aperol')
 mint_leaves = Ingredient.create!(name:'Mint Leaves')
 coconut_cream = Ingredient.create!(name:'Coconut Cream')
+raspberry = Ingredient.create!(name:'Raspberry')
 
 puts "Ingedients OK!"
 
 puts "Creating Cocktails ... "
 
 cosmopolitan = Cocktail.create!(name:'Cosmopolitan', category:alc_cat, user:michel, description:"The tangy concoction of vodka, triple sec, lime juice and cranberry juice has managed to leapfrog the venerable screwdriver as many vodka drinkers prefer the Cosmopolitan’s cleaner and slightly tart taste. The keys to the preparation of a Cosmopolitan are a good brand of cranberry juice and Cointreau Triple Sec, two essential elements to the drink.")
-cosmopolitan_photo = URI.open('https://image.freepik.com/photos-gratuite/femme-boisson_144627-22127.jpg')
-cosmopolitan.photo.attach(io: cosmopolitan_photo, filename: 'cosmopolitan.jpg', content_type: 'image/jpeg')
+cosmopolitan_photo = URI.open('https://image.freepik.com/photos-gratuite/cocktail-au-zeste-orange_141793-1157.jpg')
+cosmopolitan.photo.attach(io: cosmopolitan_photo, filename: 'cosmopolitan.jpg', content_type: 'image/jpg')
 
 mojito = Cocktail.create!(name:'Mojito', category:alc_cat, user:michel, description:"The Mojito complimenting summer perfectly with a fresh minty taste. The mixture of white rum, mint, lime juice, sugar and soda water is crisp and clean with a relatively low alcohol content, the soda water can be replaced with sprite or 7-up. When preparing a mojito always crush the mint leaves as opposed to dicing to unlock oils that will assist with enhancing the minty flavour.")
-mojito_photo = URI.open('https://images.pexels.com/photos/4966101/pexels-photo-4966101.jpeg')
-mojito.photo.attach(io:mojito_photo , filename: 'mojito.jpeg', content_type: 'image/jpeg')
+mojito_photo = URI.open('https://cdn.pixabay.com/photo/2018/06/28/18/11/mojito-3504486_1280.jpg')
+mojito.photo.attach(io:mojito_photo , filename: 'mojito.jpg', content_type: 'image/jpg')
 
 margarita = Cocktail.create!(name:'Margarita', category:alc_cat, user:michel, description:"The simple mixture of tequila, triple sec and lime juice is often blended with ice but is traditionally served on the rocks. The cocktail is generally presented in a salt rimmed glass. Various fruity versions have been adapted from the traditional lime, such as raspberry, peach and strawberry.")
-margarita_photo = URI.open('https://cdn.pixabay.com/photo/2019/07/21/19/51/margarita-4353490_1280.jpg')
+margarita_photo = URI.open('https://image.freepik.com/photos-gratuite/cocktail-classique-margarita-du-sel-bord-du-verre-soucoupe-table-blanche_23-2148283644.jpg')
 margarita.photo.attach(io: margarita_photo, filename: 'margarita.jpg', content_type: 'image/jpg')
 
 pina_colada = Cocktail.create!(name:'Piña Colada', category:alc_cat, user:michel, description:"The classic tropical cocktail, with a distinctive look and taste. More of a smoothie as opposed to an alcoholic beverage. The modest yet perfect blend of coconut milk, rum and pineapple juice has been a firm favourite throughout the years.")
-pina_colada_photo = URI.open('https://image.freepik.com/photos-gratuite/pinacolada-cocktail-surmonte-tranche-ananas_140725-1832.jpg')
+pina_colada_photo = URI.open('https://image.freepik.com/photos-gratuite/cocktail-noix-coco-paille-palmier-plage_268835-1922.jpg')
 pina_colada.photo.attach(io: pina_colada_photo, filename: 'pina-colada.jpg', content_type: 'image/jpg')
 
 spritz = Cocktail.create!(name:'Aperol Spritz', category:alc_cat, user:michel, description:"If you haven’t noticed the Aperol Spritz, you haven’t been drinking (or on Instagram). Moving into the top 10 from No. 22 in 2017, this popular aperitif is as visually pleasing as it is tasty and easy to make: a three-two-one ratio of Prosecco, Aperol, and soda. May the summer of spritz compel you.")
-spritz_photo = URI.open('https://images.pexels.com/photos/1280364/pexels-photo-1280364.jpeg')
-spritz.photo.attach(io: spritz_photo, filename: 'spritz.jpeg', content_type: 'image/jpeg')
+spritz_photo = URI.open('https://image.freepik.com/photos-gratuite/verre-cocktail-martini-rouge-citron-fruits-rouges_176474-2509.jpg')
+spritz.photo.attach(io: spritz_photo, filename: 'spritz.jpg', content_type: 'image/jpg')
 
 dry_martini = Cocktail.create!(name:'Dry Martini', category:alc_cat, user:michel, description:"A well-made dry Martini is elegance in a glass. The classic mix of gin and dry vermouth ranks No. 6 in the top 50 cocktails of the year.")
-dry_martini_photo = URI.open('https://images.pexels.com/photos/4786625/pexels-photo-4786625.jpeg')
-dry_martini.photo.attach(io: dry_martini_photo, filename: 'dry_martini.jpeg', content_type: 'image/jpeg')
+dry_martini_photo = URI.open('https://image.freepik.com/photos-gratuite/vue-laterale-martini-dans-verre-aux-olives_176474-2476.jpg')
+dry_martini.photo.attach(io: dry_martini_photo, filename: 'dry_martini.jpg', content_type: 'image/jpg')
 
 virgin_mojito = Cocktail.create!(name:'Virgin Mojito', category:no_alc_cat, user:michel, description:"A refreshing blend of mint and lemon flavours, this virgin mojito recipe will become your favourite. If you want to relish one of the most popular non-alcoholic beverages in India, this easy virgin mojito recipe is the way to go. Try a tall glass of cool virgin mojito with barbequed veggies or meats for an unforgettable experience! The flavours of this refreshing mix will rejuvenate and calm your senses at the same time. A perfectly satisfying drink for a hot day, Virgin Mojito is something that you would end up making very often after trying it once.")
-virgin_mojito_photo = URI.open('https://images.pexels.com/photos/4966101/pexels-photo-4966101.jpeg')
-virgin_mojito.photo.attach(io:virgin_mojito_photo , filename: 'virgin_mojito.jpeg', content_type: 'image/jpeg')
+virgin_mojito_photo = URI.open('https://image.freepik.com/photos-gratuite/close-up-mojito-cocktail-menthe-citron-vert-glace-seau-glace-fumee_176474-2447.jpg')
+virgin_mojito.photo.attach(io:virgin_mojito_photo , filename: 'virgin_mojito.jpg', content_type: 'image/jpg')
+
+raspberry_lemonade = Cocktail.create!(name:'Raspberry Cocktail', category:no_alc_cat, user:michel, description:"An easy recipe for Raspberry Lemonade Fizz. Make this non-alcoholic beverage the “signature drink” at your next party! It only takes 3 ingredients and everything can be made ahead. And you can spike it if you want to!")
+raspberry_lemonade_photo = URI.open('https://image.freepik.com/photos-gratuite/cocktail-framboises_23-2148371230.jpg')
+raspberry_lemonade.photo.attach(io:raspberry_lemonade_photo , filename: 'raspberry_lemonade.jpg', content_type: 'image/jpg')
 
 puts "Cocktails OK!"
 
@@ -124,6 +129,13 @@ virgin_mojito_lime_juice = Dose.create!(cocktail:virgin_mojito, ingredient_id:30
 virgin_mojito_carbonated_water = Dose.create!(cocktail:virgin_mojito, ingredient_id:33, amount:120, unit:"ml")
 virgin_mojito_sugar_syrup = Dose.create!(cocktail:virgin_mojito, ingredient_id:49, amount:15, unit:"ml")
 virgin_mojito_lime = Dose.create!(cocktail:virgin_mojito, ingredient_id:56, amount:1, unit:"unit")
+
+raspberry_lemonade_raspberry = Dose.create!(cocktail:raspberry_lemonade, ingredient:raspberry, amount:8, unit:"unit")
+raspberry_lemonade_mint_leaves = Dose.create!(cocktail:raspberry_lemonade, ingredient:mint_leaves, amount:6, unit:"unit")
+raspberry_lemonade_lime_juice = Dose.create!(cocktail:raspberry_lemonade, ingredient_id:30, amount:50, unit:"ml")
+raspberry_lemonade_sugar_syrup = Dose.create!(cocktail:raspberry_lemonade, ingredient_id:49, amount:50, unit:"ml")
+raspberry_lemonade_carbonated_water = Dose.create!(cocktail:raspberry_lemonade, ingredient_id:33, amount:120, unit:"ml")
+raspberry_lemonade_lime = Dose.create!(cocktail:raspberry_lemonade, ingredient_id:56, amount:1, unit:"slice")
 
 puts "Doses OK!"
 
