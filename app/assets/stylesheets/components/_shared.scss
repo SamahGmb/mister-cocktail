@@ -71,11 +71,11 @@ html, body {
 
 .main {
   min-height: 100%;
-  margin-bottom: -50px;
+  margin-bottom: -100px;
 }
 
-.push, .footer {
-  height: 50px;
+.push, .footer, .home-footer {
+  height: 100px;
 }
 
 // Padding / Margin

@@ -43,12 +43,25 @@
           </div>
         </div>
       <% end %>
+      <% if @cocktail.user == @user %>
+        <div class="center">
+          <div class="btn">
+            <button class="text-center" ><%= link_to '<-- my cocktails', my_cocktails_cocktails_path %></button>
+          </div>
+        </div>
+      <% else %>
+        <div class="center">
+          <div class="btn">
+            <button class="text-center" ><%= link_to '<-- cocktail list', cocktails_path %></button>
+          </div>
+        </div>
+      <% end %>
     </div>
     <div class="cocktail-img" >
       <% if @cocktail.photo.attached? %>
         <%= cl_image_tag @cocktail.photo.key, crop: :fill %>
       <% else %>
-        <%= image_tag 'cocktail-default-image.png' %>
+        <%= image_tag 'cocktail-default-image.jpg' %>
       <% end %>
     </div>
   </div>
