@@ -29,7 +29,7 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.find(params[:id])
     @cocktail.destroy
 
-    redirect_to root_path
+    redirect_to my_cocktails_cocktails_path
   end
 
   def my_cocktails

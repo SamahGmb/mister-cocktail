@@ -36,10 +36,25 @@
 }
 
 .cocktail-card-name h3 {
-  padding-left: 150px;
+  padding-left: 100px;
 }
 
 .cocktail-card-name h3 a:hover {
+  color: $main-color;
+}
+
+// My Cocktails
+
+.cocktail-name-trash {
+  display: flex;
+  align-items: baseline;
+}
+
+.cocktail-name-trash i {
+  padding-left: 16px;
+}
+
+.cocktail-name-trash i:hover {
   color: $main-color;
 }
 

@@ -1,37 +1,44 @@
-<div class="banner">
-  <%= image_tag "banner-my-cocktails.png" %>
+<div class="banner radius-bottom ">
+  <h1>your cocktails</h1>
+  <p>tasty & delicious cocktails at home !</p>
 </div>
 <div class="wrapper">
-  <div class="center">
-    <div class="cta btn-lg">
-      <%= link_to new_cocktail_path do %>
-        <p class="text-center" >create your cocktail</p>
+  <div class="flex-center padding-section-index ">
+    <div class="btn">
+      <button class="text-center" ><%= link_to 'create your cocktail', new_cocktail_path %></button>
+    </div>
+  </div>
+  <div class="padding-section-index">
+    <div class="cocktails-cards">
+      <% @cocktails.each do |cocktail| %>
+        <div class="cocktail-card relative ">
+          <div class="cocktail_card-img" >
+            <%= link_to cocktail_path(cocktail) do %>
+              <% if cocktail.photo.attached? %>
+                <%= cl_image_tag cocktail.photo.key %>
+              <% else %>
+                <%= image_tag 'cocktail-default-image.png' %>
+              <% end %>
+            <% end %>
+          </div>
+          <div class="cocktail-name-trash">
+            <div class="cocktail-card-name" >
+              <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
+            </div>
+            <div>
+              <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
+                <i class="far fa-trash-alt small-icone "></i>
+              <% end %>
+            </div>
+          </div>
+        </div>
       <% end %>
     </div>
   </div>
-  <div class="cocktails-cards">
-    <% @cocktails.each do |cocktail| %>
-      <div class="cocktail-card">
-        <div class="cocktail-card-img" >
-          <%= link_to cocktail_path(cocktail) do %>
-            <% if cocktail.photo.attached? %>
-              <%= cl_image_tag cocktail.photo.key, height: 350, width: 350, crop: :fill, radius:4 %>
-            <% else %>
-              <%= image_tag 'cocktail-default-image.png', height: 350, width: 350 %>
-            <% end %>
-          <% end %>
-        </div>
-        <div class="cocktail-card-title space-btw ">
-          <div>
-            <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
-          </div>
-          <div>
-            <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
-              <i class="far fa-trash-alt small-icone "></i>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    <% end %>
+  <div class="flex-center padding-section-index ">
+    <div class="btn">
+      <button class="text-center" ><%= link_to 'create your cocktail', new_cocktail_path %></button>
+    </div>
   </div>
 </div>
+
