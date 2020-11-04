@@ -8,4 +8,5 @@ class Cocktail < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
   validates :description, presence: { allow_blank: true }
+  validates :category_id, presence: true
 end
