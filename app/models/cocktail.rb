@@ -9,4 +9,13 @@ class Cocktail < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :description, presence: { allow_blank: true }
   validates :category_id, presence: true
+
+  def next
+    user.cocktails.where("id > ?", id).order(id: :asc).limit(1).first
+  end
+
+  def prev
+    user.cocktails.where("id < ?", id).order(id: :desc).limit(1).first
+  end
+
 end
