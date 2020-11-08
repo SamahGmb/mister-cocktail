@@ -11,6 +11,11 @@ h1, h2, h3, a, p {
   flex-wrap: wrap
 }
 
+.flex-wrap-reverse {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -93,7 +98,7 @@ h1, h3 {
 }
 
 .padding-section {
-  padding: 72px;
+  padding: 16px 72px;
 }
 
 // Style

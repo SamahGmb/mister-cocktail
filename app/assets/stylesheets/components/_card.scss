@@ -49,6 +49,10 @@
   height: 200px;
 }
 
+.no-cocktail {
+  margin: 40px 0;
+}
+
 .cocktail-name-trash {
   display: flex;
   align-items: baseline;
@@ -98,9 +102,9 @@
 .cocktail-infos-igdts {
   border: 2px solid $main-color;
   border-radius: 40px;
-  padding: 8px;
-  width: 150px;
-  height: 150px;
+  padding: 16px;
+  width: 120px;
+  height: 120px;
   margin: 8px;
   display: flex;
   flex-direction: column;
@@ -151,4 +155,17 @@
     height: 50vh;
     border-radius: 0;
   }
+}
+
+.prev-next {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prev-next a {
+  font-weight: bold;
+}
+
+.prev-next a:hover {
+  color: $main-color;
 }
