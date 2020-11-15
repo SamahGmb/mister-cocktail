@@ -13,42 +13,44 @@
         </div>
         <p><%= @cocktail.description %></p>
       </div>
-      <h3>ingredients</h3>
-      <% if @cocktail.doses.empty? %>
-        <div class="no-cocktail flex-center " >
-          <%= image_tag "mascotte.svg" %>
-          <p class="text-center" >No ingredient added yet ! <br>  Let's create your first now ! </p>
-        </div>
-      <% else %>
-        <div class="flex-wrap flex-center " >
-          <% @cocktail.doses.each do |dose| %>
-            <ul>
-              <li class="cocktail-infos-igdts">
-                <div>
-                  <span class="bold-text"> <%= dose.amount %> <%= dose.unit %></span>
-                </div>
-                <div class="text-center">
-                  <%= dose.ingredient.name %>
-                </div>
-                <% if @cocktail.user == @user %>
-                  <div class="edit-delete-igdt" >
-                    <div>
-                      <%= link_to edit_dose_path(dose) do %>
-                        <i class="far fa-edit small-icone padding-left "></i>
-                      <% end %>
-                    </div>
-                    <div>
-                      <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
-                        <i class="far fa-trash-alt small-icone"></i>
-                      <% end %>
-                    </div>
+      <div>
+        <h3>ingredients</h3>
+        <% if @cocktail.doses.empty? %>
+          <div class="no-cocktail flex-center " >
+            <%= image_tag "mascotte.svg" %>
+            <p class="text-center" >No ingredient added yet ! <br>  Let's create your first now ! </p>
+          </div>
+        <% else %>
+          <div class="flex-wrap flex-center " >
+            <% @cocktail.doses.each do |dose| %>
+              <ul>
+                <li class="cocktail-infos-igdts">
+                  <div>
+                    <span class="bold-text"> <%= dose.amount %> <%= dose.unit %></span>
                   </div>
-                <% end %>
-              </li>
-            </ul>
-          <% end %>
-        </div>
-      <% end %>
+                  <div class="text-center">
+                    <%= dose.ingredient.name %>
+                  </div>
+                  <% if @cocktail.user == @user %>
+                    <div class="edit-delete-igdt" >
+                      <div>
+                        <%= link_to edit_dose_path(dose) do %>
+                          <i class="far fa-edit small-icone padding-left "></i>
+                        <% end %>
+                      </div>
+                      <div>
+                        <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
+                          <i class="far fa-trash-alt small-icone"></i>
+                        <% end %>
+                      </div>
+                    </div>
+                  <% end %>
+                </li>
+              </ul>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
       <div class="flex-wrap-reverse flex-center " >
         <% if @cocktail.user == @user %>
           <div class="center">
