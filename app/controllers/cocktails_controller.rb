@@ -7,6 +7,11 @@ class CocktailsController < ApplicationController
     @user = User.find(1)
     @cocktails = Cocktail.all
     @categories = @cocktails.group_by { |cocktail| cocktail.category }
+
+    # random cocktail
+    home_cocktails = Cocktail.where(user:1)
+    offset = rand(home_cocktails.count)
+    @random_cocktail = Cocktail.offset(offset).first(1)
   end
 
   def show
