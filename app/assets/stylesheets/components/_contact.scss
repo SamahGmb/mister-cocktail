@@ -1,28 +1,31 @@
+.contact-section {
+  display: flex;
+}
+
 .contact-info {
   display: flex;
   flex-direction: column;
+  width: 70%;
 }
 
-.call-me, .follow-me, .my-work {
+.call-me, .email-me, .follow-me, .my-web-site ,.my-work {
   display: flex;
   align-items: center;
   height: 200px;
   width: 100%;
-
 }
 
 .contact-info i {
   font-size: 48px;
-  padding: 40px;
-  border-radius: 50%;
+  padding: 16px;
 }
 
 .contact-info a:hover {
-  color: white;
+  color: $main-color;
 }
 
 .contact-details {
-  padding-left: 80px;
+  padding-left: 24px;
 }
 
 .contact-arrow i {
@@ -35,5 +38,23 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.contact-img {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+}
+
+.contact-img img {
+  height: 70%;
+}
+
+@media (max-width: 720px) {
+  .contact-img {
+    display: none;
+  }
+}
+
+
 
 

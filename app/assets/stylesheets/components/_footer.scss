@@ -17,6 +17,11 @@
   text-transform: capitalize;
 }
 
+.footer a, .home-footer a {
+  font-weight: bold;
+  font-size: 13px;
+}
+
 .footer a:hover{
   color: $main-color;
 }

@@ -2,55 +2,89 @@
     <h3 class="text-center">contact me</h3>
   </div>
   <div class="wrapper">
-    <div class="contact-info" >
-      <div class="call-me" >
-        <div>
-         <i class="fas fa-phone-square-alt"></i>
+    <div class="contact-section" >
+      <div class="contact-info" >
+        <div class="call-me" >
+          <div>
+           <i class="fas fa-phone-square-alt"></i>
+          </div>
+          <div class="contact-details" >
+            <h4>00 33 7 82 08 90 88</h4>
+            <p>call me to discuss about your project</p>
+          </div>
         </div>
-        <div class="contact-details" >
-          <h4>00 33 7 82 08 90 88</h4>
-          <p>call me to discuss about your project</p>
+        <div class="email-me" >
+          <div>
+           <i class="fas fa-envelope-square"></i>
+          </div>
+          <div class="contact-details" >
+            <h4>samahgmb@gmail.com</h4>
+            <p>need to discuss about your project ? or Give some feedback about the website? </p>
+          </div>
+        </div>
+        <div class="follow-me" >
+          <div>
+           <%= link_to 'https://www.linkedin.com/in/samah-giambiasi/', target:'_blank' do %>
+            <i class="fab fa-linkedin"></i>
+           <% end %>
+          </div>
+          <div class="contact-details" >
+            <div class="space-between" >
+              <div>
+                <h4>follow me</h4>
+              </div>
+              <div class="contact-arrow" >
+                <%= link_to 'https://www.linkedin.com/in/samah-giambiasi/', target:'_blank' do %>
+                  <i class="fas fa-arrow-right"></i>
+                <% end %>
+              </div>
+            </div>
+           <p>discover all my experience and my background</p>
+          </div>
+        </div>
+        <div class="my-web-site" >
+          <div>
+            <%= link_to 'https://samahgmb.github.io/', target:'_blank' do %>
+              <i class="fas fa-at"></i>
+            <% end %>
+          </div>
+          <div class="contact-details" >
+            <div class="space-between" >
+              <div>
+                <h4>discover my portfolio</h4>
+              </div>
+              <div class="contact-arrow" >
+                <%= link_to 'https://samahgmb.github.io/', target:'_blank' do %>
+                  <i class="fas fa-arrow-right"></i>
+                <% end %>
+              </div>
+            </div>
+            <p>see more about last projects I worked on</p>
+          </div>
+        </div>
+        <div class="my-work" >
+          <div>
+            <%= link_to 'https://github.com/SamahGmb', target:'_blank' do %>
+              <i class="fab fa-github-square"></i>
+            <% end %>
+          </div>
+          <div class="contact-details" >
+            <div class="space-between" >
+              <div>
+                <h4>discover my work</h4>
+              </div>
+              <div class="contact-arrow" >
+                <%= link_to 'https://github.com/SamahGmb', target:'_blank' do %>
+                  <i class="fas fa-arrow-right"></i>
+                <% end %>
+              </div>
+            </div>
+            <p>see more about last projects I worked on</p>
+          </div>
         </div>
       </div>
-      <div class="follow-me" >
-        <div>
-         <%= link_to 'https://www.linkedin.com/in/samah-giambiasi/', target:'_blank' do %>
-          <i class="fab fa-linkedin"></i>
-         <% end %>
-        </div>
-        <div class="contact-details" >
-          <div class="space-between" >
-            <div>
-              <h4>follow me</h4>
-            </div>
-            <div class="contact-arrow" >
-              <%= link_to 'https://www.linkedin.com/in/samah-giambiasi/', target:'_blank' do %>
-                <i class="fas fa-arrow-right"></i>
-              <% end %>
-            </div>
-          </div>
-         <p>discover all my experience and my background</p>
-        </div>
-      </div>
-      <div class="my-work" >
-        <div>
-          <%= link_to 'https://github.com/SamahGmb', target:'_blank' do %>
-            <i class="fab fa-github-square"></i>
-          <% end %>
-        </div>
-        <div class="contact-details" >
-          <div class="space-between" >
-            <div>
-              <h4>discover my work</h4>
-            </div>
-            <div class="contact-arrow" >
-              <%= link_to 'https://github.com/SamahGmb', target:'_blank' do %>
-                <i class="fas fa-arrow-right"></i>
-              <% end %>
-            </div>
-          </div>
-          <p>see more about last projects I worked on</p>
-        </div>
+      <div class="contact-img" >
+        <%= image_tag "contact.png" %>
       </div>
     </div>
   </div>
