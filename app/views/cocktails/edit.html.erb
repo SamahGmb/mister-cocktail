@@ -3,16 +3,8 @@
    <p class="text-center" >tasty & delicious cocktails at home ! </p>
  </div>
 <div class="wrapper">
-  <div class="cocktail-form">
-    <%= simple_form_for(@cocktail) do |f| %>
-      <%= f.input :name, :label => 'Cocktail Name' %>
-      <%= f.association :category, :label => 'Choose a category' %>
-      <%= f.input :description, :label => 'Cocktail Description', :hint => 'Description is Optional!', :required => false %>
-      <%= f.input :photo, as: :file %>
-      <hr>
-      <%= f.button :submit, class: "btn" %>
-      <%= f.button :button, "Reset", type: "reset", class: "btn" %>
-    <% end %>
+  <%= render "form", cocktail: @cocktail %>
+  <div class="back" >
+    <%= link_to "<< Back", my_cocktails_cocktails_path %>
   </div>
-   <%= link_to "<< Back", my_cocktails_cocktails_path %>
 </div>
