@@ -34,6 +34,7 @@
         <% end %>
       </div>
   </div>
+  <hr>
   <div class="padding-section-index">
     <h4>famous cocktails</h4>
     <div class="cocktails-cards">
@@ -56,5 +57,40 @@
         <% end %>
       <% end %>
     </div>
+  </div>
+  <hr>
+  <div class="padding-section-index" >
+    <h2 class="text-center" >cocktail of the day</h2>
+      <% @random_cocktail.each do |cocktail| %>
+        <div class="random-cocktail-section" >
+          <div class="random-cocktail-photo">
+            <% if cocktail.photo.attached? %>
+              <%= cl_image_tag cocktail.photo.key %>
+            <% else %>
+              <%= image_tag 'cocktail-default-image.jpg' %>
+            <% end %>
+              <div class="random-cocktail-name" >
+                <h4><%= cocktail.name %></h4>
+              </div>
+          </div>
+          <div class="random-cocktail-infos" >
+            <h4 class="text-center" >ingredients</h4>
+            <div class="random-cocktail-ingredients" >
+              <% cocktail.doses.each do |dose| %>
+                <ul>
+                  <li class="cocktail-infos-igdts">
+                    <div>
+                      <span class="bold-text"> <%= dose.amount %> <%= dose.unit %></span>
+                    </div>
+                    <div class="text-center">
+                      <%= dose.ingredient.name %>
+                    </div>
+                  </li>
+                </ul>
+              <% end %>
+            </div>
+          </div>
+      </div>
+    <% end %>
   </div>
 </div>
