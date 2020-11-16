@@ -1,6 +1,7 @@
 class CocktailsController < ApplicationController
 
   skip_before_action :authenticate_user!, only: [ :index, :show]
+  before_action :set_cocktail, only: [:show, :edit, :update, :destroy]
 
   def index
     @user = User.find(1)
@@ -10,7 +11,6 @@ class CocktailsController < ApplicationController
 
   def show
     @user = current_user
-    @cocktail = Cocktail.find(params[:id])
   end
 
   def new
@@ -26,18 +26,16 @@ class CocktailsController < ApplicationController
   end
 
   def edit
-    @cocktail = Cocktail.find(params[:id])
+
   end
 
   def update
-    @cocktail = Cocktail.find(params[:id])
     @cocktail.update(cocktail_params)
 
     redirect_to cocktail_path(@cocktail)
   end
 
   def destroy
-    @cocktail = Cocktail.find(params[:id])
     @cocktail.destroy
 
     redirect_to my_cocktails_cocktails_path
@@ -51,6 +49,10 @@ class CocktailsController < ApplicationController
 
   def cocktail_params
     params.require(:cocktail).permit(:name, :category_id, :description, :photo)
+  end
+
+  def set_cocktail
+    @cocktail = Cocktail.find(params[:id])
   end
 
 end

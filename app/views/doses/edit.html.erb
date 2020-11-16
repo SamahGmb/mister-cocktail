@@ -10,7 +10,10 @@
       <%= f.input :unit, collection: ['ml','slice','unit'], selected: 'ml' %>
       <hr>
       <%= f.button :submit, 'Add' ,class: "btn" %>
-      <%= f.button :button, "Cancel", type: "reset", class: "btn" %>
+      <%= f.button :button, "Reset", type: "reset", class: "btn" %>
     <% end %>
+  </div>
+  <div class="back">
+    <%= link_to "<< Back", cocktail_path(@dose.cocktail) %>
   </div>
 </div>
