@@ -59,31 +59,31 @@ puts "Ingedients OK!"
 
 puts "Creating Cocktails ... "
 
-cosmopolitan = Cocktail.create!(name:'Cosmopolitan', category:alc_cat, user:michel, description:"The tangy concoction of vodka, triple sec, lime juice and cranberry juice has managed to leapfrog the venerable screwdriver as many vodka drinkers prefer the Cosmopolitan’s cleaner and slightly tart taste. The keys to the preparation of a Cosmopolitan are a good brand of cranberry juice and Cointreau Triple Sec, two essential elements to the drink.")
+cosmopolitan = Cocktail.create!(name:'Cosmopolitan', category:alc_cat, user:michel, description:"Shake ingredients in a cocktail shaker with ice and strain into a cocktail glass. To make the garnish: hold a 3cm round piece of orange zest about 10cm above your cosmo and very carefully wave it over a lit match or lighter flame. Bend the outer edge of the zest in towards the flame so that the orange oils are released, then drop the zest into your drink.")
 cosmopolitan_photo = URI.open('https://image.freepik.com/photos-gratuite/cocktail-au-zeste-orange_141793-1157.jpg')
 cosmopolitan.photo.attach(io: cosmopolitan_photo, filename: 'cosmopolitan.jpg', content_type: 'image/jpg')
 
-mojito = Cocktail.create!(name:'Mojito', category:alc_cat, user:michel, description:"The Mojito complimenting summer perfectly with a fresh minty taste. The mixture of white rum, mint, lime juice, sugar and soda water is crisp and clean with a relatively low alcohol content, the soda water can be replaced with sprite or 7-up. When preparing a mojito always crush the mint leaves as opposed to dicing to unlock oils that will assist with enhancing the minty flavour.")
+mojito = Cocktail.create!(name:'Mojito', category:alc_cat, user:michel, description:"Muddle the lime juice, sugar and mint leaves in a small jug, crushing the mint as you go – you can use the end of a rolling pin for this. Pour into a tall glass and add a handful of ice. Pour over the rum, stirring with a long-handled spoon. Top up with soda water, garnish with mint and serve.")
 mojito_photo = URI.open('https://cdn.pixabay.com/photo/2018/06/28/18/11/mojito-3504486_1280.jpg')
 mojito.photo.attach(io:mojito_photo , filename: 'mojito.jpg', content_type: 'image/jpg')
 
-margarita = Cocktail.create!(name:'Margarita', category:alc_cat, user:michel, description:"The simple mixture of tequila, triple sec and lime juice is often blended with ice but is traditionally served on the rocks. The cocktail is generally presented in a salt rimmed glass. Various fruity versions have been adapted from the traditional lime, such as raspberry, peach and strawberry.")
+margarita = Cocktail.create!(name:'Margarita', category:alc_cat, user:michel, description:"Sprinkle a few teaspoons of salt over the surface of a small plate or saucer. Rub one wedge of lime along the rim of a tumbler and then dip it into the salt so that the entire rim is covered. Fill a cocktail shaker with ice, then add the tequila, lime juice and triple sec. Shake until the outside of the shaker feels cold. Strain the mix into the prepared glass over fresh ice. Serve with a wedge of lime.")
 margarita_photo = URI.open('https://image.freepik.com/photos-gratuite/cocktail-classique-margarita-du-sel-bord-du-verre-soucoupe-table-blanche_23-2148283644.jpg')
 margarita.photo.attach(io: margarita_photo, filename: 'margarita.jpg', content_type: 'image/jpg')
 
-pina_colada = Cocktail.create!(name:'Piña Colada', category:alc_cat, user:michel, description:"The classic tropical cocktail, with a distinctive look and taste. More of a smoothie as opposed to an alcoholic beverage. The modest yet perfect blend of coconut milk, rum and pineapple juice has been a firm favourite throughout the years.")
+pina_colada = Cocktail.create!(name:'Piña Colada', category:alc_cat, user:michel, description:"Pulse all the ingredients along with a handful of ice in a blender until smooth. Pour into a tall glass and garnish as you like.")
 pina_colada_photo = URI.open('https://image.freepik.com/photos-gratuite/cocktail-noix-coco-paille-palmier-plage_268835-1922.jpg')
 pina_colada.photo.attach(io: pina_colada_photo, filename: 'pina-colada.jpg', content_type: 'image/jpg')
 
-spritz = Cocktail.create!(name:'Aperol Spritz', category:alc_cat, user:michel, description:"If you haven’t noticed the Aperol Spritz, you haven’t been drinking (or on Instagram). Moving into the top 10 from No. 22 in 2017, this popular aperitif is as visually pleasing as it is tasty and easy to make: a three-two-one ratio of Prosecco, Aperol, and soda. May the summer of spritz compel you.")
+spritz = Cocktail.create!(name:'Aperol Spritz', category:alc_cat, user:michel, description:"Put a couple of cubes of ice into 2 glasses and add a 50 ml measure of Aperol to each. Divide the prosecco between the glasses and then top up with soda, if you like.")
 spritz_photo = URI.open('https://image.freepik.com/photos-gratuite/verre-cocktail-martini-rouge-citron-fruits-rouges_176474-2509.jpg')
 spritz.photo.attach(io: spritz_photo, filename: 'spritz.jpg', content_type: 'image/jpg')
 
-dry_martini = Cocktail.create!(name:'Dry Martini', category:alc_cat, user:michel, description:"A well-made dry Martini is elegance in a glass. The classic mix of gin and dry vermouth ranks No. 6 in the top 50 cocktails of the year.")
+dry_martini = Cocktail.create!(name:'Dry Martini', category:alc_cat, user:michel, description:"Put two martini glasses in the fridge to chill. Thread the olives onto two cocktail sticks and set aside. Fill a jug or mixing glass with the ice, then pour in the gin, vermouth and olive brine. Stir until the outside of the jug feels cold. Taste to make sure that it's icy cold and that you’re happy with the dilution. Strain the mix into the chilled glasses and garnish with the olive skewers.")
 dry_martini_photo = URI.open('https://image.freepik.com/photos-gratuite/vue-laterale-martini-dans-verre-aux-olives_176474-2476.jpg')
 dry_martini.photo.attach(io: dry_martini_photo, filename: 'dry_martini.jpg', content_type: 'image/jpg')
 
-virgin_mojito = Cocktail.create!(name:'Virgin Mojito', category:no_alc_cat, user:michel, description:"A refreshing blend of mint and lemon flavours, this virgin mojito recipe will become your favourite. If you want to relish one of the most popular non-alcoholic beverages in India, this easy virgin mojito recipe is the way to go. Try a tall glass of cool virgin mojito with barbequed veggies or meats for an unforgettable experience! The flavours of this refreshing mix will rejuvenate and calm your senses at the same time. A perfectly satisfying drink for a hot day, Virgin Mojito is something that you would end up making very often after trying it once.")
+virgin_mojito = Cocktail.create!(name:'Virgin Mojito', category:no_alc_cat, user:michel, description:"Place mint leaves and lime juice in a glass and muddle them together. Muddling = mushing them up and crushing the leaves to release the flavor and oils the mint. Use a muddler or the handle of a wooden spoon. Or a set of brass knuckles. To each their own. Add the honey simple syrup. Add the sparkling water. Garnish with lime slices, a sprig of mint, and/or fresh fruit. ")
 virgin_mojito_photo = URI.open('https://image.freepik.com/photos-gratuite/close-up-mojito-cocktail-menthe-citron-vert-glace-seau-glace-fumee_176474-2447.jpg')
 virgin_mojito.photo.attach(io:virgin_mojito_photo , filename: 'virgin_mojito.jpg', content_type: 'image/jpg')
 

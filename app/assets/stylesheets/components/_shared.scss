@@ -85,7 +85,7 @@ html, body {
 
 // Padding / Margin
 
-h1, h3 {
+h1, h2, h3 {
   padding: 16px 0;
 }
 
@@ -143,12 +143,37 @@ button:focus {
   border-radius: 40px 40px 0 0;
 }
 
+.back {
+  padding: 16px;
+  font-weight: bold;
+}
 .back a:hover {
   color: $main-color;
 }
 
+// Devise
 
+.devise-shared-links {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
 
+.devise-shared-links a:hover {
+  color: white;
+}
+
+.back-devise a:hover {
+  color: white;
+}
+
+.unhappy a:hover {
+  color: white;
+}
+
+.unhappy i {
+  padding: 0 16px;
+}
 
 
 

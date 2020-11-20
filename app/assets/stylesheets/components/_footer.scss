@@ -1,4 +1,4 @@
-.home-footer {
+.home-footer, .footer {
   background: linear-gradient( #3af901, #87fa00, #cefb02, #fefb01);
 }
 
@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-around;
   list-style: none;
+  align-items : baseline;
 }
 
 .footer ul li, .home-footer ul li {
@@ -19,14 +20,14 @@
 
 .footer a, .home-footer a {
   font-weight: bold;
-  font-size: 13px;
+  font-size: 11px;
 }
 
-.footer a:hover{
+.footer a:hover, .home-footer a:hover {
   color: $main-color;
 }
 
-.home-footer a:hover {
+.home-footer a:hover, .footer a:hover  {
   color: white;
 }
 
