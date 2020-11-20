@@ -6,7 +6,7 @@ class Cocktail < ApplicationRecord
 
   has_one_attached :photo
 
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true
   validates :description, presence: { allow_blank: true }
   validates :category_id, presence: true
 

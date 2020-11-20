@@ -9,33 +9,67 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item active underline">
         <%= link_to cocktails_path, class: "nav-link" do %>
           <p class="bold-text" >cocktail list</p>
         <% end %>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item active underline">
         <%= link_to new_cocktail_path, class: "nav-link" do %>
           <p class="bold-text" >create your cocktail</p>
         <% end %>
       </li>
+      <div class="mobile-display" >
+        <hr>
+        <% if user_signed_in? %>
+          <li class="nav-item active underline">
+            <%= link_to my_cocktails_cocktails_path, class: "nav-link" do %>
+              <p class="bold-text" ><i class="fas fa-cocktail"></i> my cocktails</p>
+            <% end %>
+          </li>
+          <hr>
+          <li class="nav-item active underline">
+            <%= link_to edit_user_registration_path, class: "nav-link" do %>
+              <p class="bold-text" ><i class="fas fa-user-edit"></i>edit profile</p>
+            <% end %>
+          </li>
+          <li class="nav-item active underline">
+            <%= link_to destroy_user_session_path, class: "nav-link" do %>
+              <p class="bold-text" ><i class="fas fa-sign-out-alt"></i>sign out</p>
+            <% end %>
+          </li>
+        <% else %>
+          <li class="nav-item active underline">
+            <%= link_to new_user_session_path, class: "nav-link" do %>
+              <p class="bold-text" >sign in</p>
+            <% end %>
+          </li>
+        <% end %>
+      </div>
       <li class="nav-item dropdown">
         <% if user_signed_in? %>
           <%= image_tag ("avatar.png"), class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <div>
               <%= link_to my_cocktails_cocktails_path, class: "dropdown-item" do %>
-                <p class="bold-text" >my cocktails</p>
+                <p><i class="fas fa-cocktail"></i> my cocktails</p>
               <% end %>
             </div>
+            <hr>
+            <div>
+              <%= link_to edit_user_registration_path, class: "dropdown-item" do %>
+                <p><i class="fas fa-user-edit"></i> edit profile</p>
+              <% end %>
+            </div>
+            <hr>
             <div>
               <%= link_to destroy_user_session_path, method: :delete, class: "dropdown-item" do %>
-                <p class="bold-text" >sign out</p>
+                <p><i class="fas fa-sign-out-alt"></i> sign out</p>
               <% end %>
             </div>
           </div>
         <% else %>
-          <li class="nav-item active">
+          <li class="nav-item active underline">
             <%= link_to new_user_session_path, class: "nav-link" do %>
               <p class="bold-text" >sign in</p>
             <% end %>
@@ -44,4 +78,5 @@
       </li>
     </ul>
   </div>
+
 </div>

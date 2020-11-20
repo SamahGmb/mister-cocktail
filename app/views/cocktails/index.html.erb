@@ -10,6 +10,7 @@
           <div class="cocktail-category">
             <button type="button" data-toggle="modal" data-target="#category<%= category.id %>">
               <h3 class="text-center"><%= category.name %></h3>
+              <i class="fas fa-arrow-right"></i>
             </button>
             <div class="modal fade" id="category<%= category.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
@@ -20,7 +21,7 @@
                   <div class="modal-body">
                     <% category.cocktails.each do |cocktail| %>
                       <ul class="fa-ul">
-                        <p><li><span class="fa-li"><i class="fas fa-glass-martini-alt"></i></span><%= link_to cocktail.name, cocktail_path(cocktail) %></li></p>
+                        <p><li><span class="fa-li"><i class="fas fa-arrow-right"></i></span><%= link_to cocktail.name, cocktail_path(cocktail) %></li></p>
                       </ul>
                     <% end %>
                   </div>
@@ -36,7 +37,7 @@
   </div>
   <hr>
   <div class="padding-section-index">
-    <h4>famous cocktails</h4>
+    <h4 >famous cocktails</h4>
     <div class="cocktails-cards">
       <% @cocktails.each do |cocktail| %>
         <% if cocktail.user == @user %>
@@ -61,6 +62,7 @@
   <hr>
   <div class="padding-section-index" >
     <h2 class="text-center" >cocktail of the day</h2>
+    <p class="text-center" >lack of ideas for tonight's cocktail? Every day, a new cocktail recipe is offered here</p>
       <% @random_cocktail.each do |cocktail| %>
         <div class="random-cocktail-section" >
           <div class="random-cocktail-photo">
@@ -70,11 +72,11 @@
               <%= image_tag 'cocktail-default-image.jpg' %>
             <% end %>
               <div class="random-cocktail-name" >
-                <h4><%= cocktail.name %></h4>
+                <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
               </div>
           </div>
           <div class="random-cocktail-infos" >
-            <h4 class="text-center" >ingredients</h4>
+            <h3 class="text-center" > <i class="fas fa-cocktail"></i> ingredients</h3>
             <div class="random-cocktail-ingredients" >
               <% cocktail.doses.each do |dose| %>
                 <ul>
@@ -87,6 +89,11 @@
                     </div>
                   </li>
                 </ul>
+              <% end %>
+            </div>
+            <div class="random_cocktail-arrow" >
+              <%= link_to cocktail_path(cocktail) do %>
+                view the recipe <i class="fas fa-arrow-right"></i>
               <% end %>
             </div>
           </div>
