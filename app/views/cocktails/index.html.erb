@@ -1,6 +1,26 @@
 <div class="banner radius-bottom ">
   <h1 class="text-center" >welcome,</h1>
   <p class="text-center" >tasty & delicious cocktails at home ! </p>
+  <div class="search-wrapper">
+    <div class="search-section">
+      <%= form_tag cocktails_path, method: :get do %>
+        <div class="form-row">
+          <div class="col-10" >
+            <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "What are you looking for?"
+            %>
+          </div>
+          <div class="col-2" >
+            <%= button_tag :type => "submit", :class => "search" do %>
+              <i class="fa fa-search"></i>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
 <div class="wrapper">
   <div class="padding-section-index">

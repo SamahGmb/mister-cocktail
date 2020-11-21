@@ -5,7 +5,17 @@ class CocktailsController < ApplicationController
 
   def index
     @user = User.find(1)
-    @cocktails = Cocktail.all
+
+    if params[:query].present?
+      @cocktails = Cocktail.search(params[:query])
+      if @cocktails.blank?
+        flash[:alert] = "No cocktail yet matches your search! Try another one!"
+        redirect_to cocktails_path
+      end
+    else
+      @cocktails = Cocktail.all
+    end
+
     @categories = @cocktails.group_by { |cocktail| cocktail.category }
 
     # random cocktail
