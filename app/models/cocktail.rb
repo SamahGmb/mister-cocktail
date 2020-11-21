@@ -1,4 +1,12 @@
 class Cocktail < ApplicationRecord
+
+  include PgSearch::Model
+  pg_search_scope :search,
+    against: [ :name ],
+    using: {
+      tsearch: { prefix: true }
+    }
+
   belongs_to :user
   belongs_to :category
   has_many :doses, dependent: :destroy

@@ -1,0 +1,51 @@
+
+.form-control {
+  border-radius: 8px;
+}
+
+.search {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: white;
+  background-color: $dark-grey;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.search:hover {
+  background-color: $medium-grey;
+}
+
+.search-wrapper {
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 16px;
+}
+
+@media (max-width: 960px) {
+  .search-wrapper {
+    width: 600px;
+  }
+}
+
+@media (max-width: 720px) {
+  .search-wrapper {
+    width: 600px;
+  }
+}
+
+@media (max-width: 540px) {
+  .search-wrapper {
+    width: 400px;
+    margin: 0 auto;
+  }
+}
+
+
