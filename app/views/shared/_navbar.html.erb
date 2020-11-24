@@ -38,6 +38,12 @@
               <p class="bold-text" ><i class="fas fa-sign-out-alt"></i>sign out</p>
             <% end %>
           </li>
+          <hr>
+          <li class="nav-item active underline">
+            <%= link_to contact_path, class: "nav-link" do %>
+              <p class="bold-text" ><i class="fas fa-envelope"></i>contact</p>
+            <% end %>
+          </li>
         <% else %>
           <li class="nav-item active underline">
             <%= link_to new_user_session_path, class: "nav-link" do %>
@@ -67,6 +73,13 @@
                 <p><i class="fas fa-sign-out-alt"></i> sign out</p>
               <% end %>
             </div>
+            <hr>
+            <div>
+              <%= link_to contact_path, class: "dropdown-item" do %>
+                <p><i class="fas fa-envelope"></i>contact</p>
+              <% end %>
+            </div>
+
           </div>
         <% else %>
           <li class="nav-item active underline">
