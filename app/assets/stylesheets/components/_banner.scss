@@ -31,13 +31,22 @@
 
 .home-page-btn {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-@media (max-width: 540px) {
-  .home-page-btn {
-    flex-wrap: wrap;
-  }
+.sign-in {
+  padding: 16px 0;
+  width: 400px;
+}
+
+.sign-in a {
+  font-weight: bold;
+  padding: 0 8px;
+}
+
+.sign-in a:hover {
+  color: white;
 }
 
 .home-page-img img {

@@ -9,10 +9,11 @@
     <div class=" home-page-img-btn padding-section-home" >
       <div class="home-page-btn padding-section-home " >
         <div class="btn">
-          <button class="text-center" ><%= link_to 'create your cocktail', new_cocktail_path %></button>
-        </div>
-        <div class="btn">
           <button class="text-center" ><%= link_to 'get inspiration', cocktails_path %></button>
+        </div>
+        <div class="sign-in">
+          <p class="text-center" >already have account ? <%= link_to "sign in", new_user_session_path %></p>
+          <p class="text-center" >then <%= link_to "create a cocktail", new_cocktail_path %> or <%= link_to "manage your cocktails", my_cocktails_cocktails_path %> </p>
         </div>
       </div>
       <div class="home-page-img padding-section-home " >
