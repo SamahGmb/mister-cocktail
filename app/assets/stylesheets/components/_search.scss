@@ -7,7 +7,7 @@
   display: block;
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
+  padding: 0.375rem 16px;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -34,5 +34,12 @@
     width: 100%;
   }
 }
+
+button.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 

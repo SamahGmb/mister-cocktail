@@ -1,6 +1,6 @@
 <div class="banner radius-bottom ">
   <h1 class="text-center" >welcome,</h1>
-  <p class="text-center" >tasty & delicious cocktails at home ! </p>
+  <p class="text-center" >tasty & delicious cocktails at home! </p>
   <div class="search-wrapper">
     <div class="search-section">
       <%= form_tag cocktails_path, method: :get do %>
@@ -96,10 +96,12 @@
               </div>
           </div>
           <div class="random-cocktail-infos" >
-            <h3 class="text-center" > <i class="fas fa-cocktail"></i> ingredients</h3>
+            <div>
+              <h3 class="text-center" > <i class="fas fa-cocktail"></i> ingredients</h3>
+            </div>
             <div class="random-cocktail-ingredients" >
               <% cocktail.doses.each do |dose| %>
-                <ul>
+                <ul class="flex-center" >
                   <li class="cocktail-infos-igdts">
                     <div>
                       <span class="bold-text"> <%= dose.amount %> <%= dose.unit %></span>
@@ -111,11 +113,11 @@
                 </ul>
               <% end %>
             </div>
-            <div class="random_cocktail-arrow" >
-              <%= link_to cocktail_path(cocktail) do %>
-                view the recipe <i class="fas fa-arrow-right"></i>
-              <% end %>
-            </div>
+          </div>
+          <div class="random_cocktail-arrow" >
+            <%= link_to cocktail_path(cocktail) do %>
+              view the recipe <i class="fas fa-arrow-right"></i>
+            <% end %>
           </div>
       </div>
     <% end %>
