@@ -1,22 +1,23 @@
 .btn {
   background-color: $dark-grey;
-  padding: 16px 48px;
+  padding: 16px 32px;
+  margin: 0 16px;
   border-radius: 8px;
-  width: 400px;
+  width: 350px;
   margin: 8px;
   color: white;
 }
 
-.btn:hover {
+.btn:hover, .back-prev-page:hover {
   background-color: $medium-grey;
   color: white;
 }
 
-.btn button {
+.btn button, .back-prev-page button {
   background-color: transparent;
 }
 
-.btn button a {
+.btn button a, .back-prev-page button a {
   font-weight: bold;
   color: white;
   font-size: 20px;
@@ -24,5 +25,22 @@
 
 .btn button a:hover {
   color: white;
+}
+
+.back-prev-page {
+  background-color: $dark-grey;
+  padding: 16px;
+  margin: 0 16px;
+  border-radius: 8px;
+  width: 200px;
+  margin: 8px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.back-prev-page button a {
+  color: white;
+  font-size: 16px;
 }
 
