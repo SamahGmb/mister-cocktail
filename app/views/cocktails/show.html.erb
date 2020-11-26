@@ -26,10 +26,10 @@
               <ul>
                 <li class="cocktail-infos-igdts">
                   <div>
-                    <span class="bold-text"> <%= dose.amount %> <%= dose.unit %></span>
+                    <span class="cocktail-dose"> <%= dose.amount %> <%= dose.unit %></span>
                   </div>
-                  <div class="text-center">
-                    <%= dose.ingredient.name %>
+                  <div class="text-center cocktail-igdt-name ">
+                    <span><%= dose.ingredient.name %></span>
                   </div>
                   <% if @cocktail.user == @user %>
                     <div class="edit-delete-igdt" >
@@ -67,9 +67,13 @@
         <% end %>
         <% if @cocktail.user == @user %>
           <div class="center">
-            <div class="btn">
-              <button class="text-center" ><%= link_to 'add an ingredient', new_cocktail_dose_path(@cocktail) %></button>
-            </div>
+            <% if @cocktail.ingredients.count < 10 %>
+              <div class="btn">
+                <button class="text-center" ><%= link_to 'add an ingredient', new_cocktail_dose_path(@cocktail) %></button>
+              </div>
+            <% else %>
+              <p class="text-center" > <span class="warning" ><i class="fas fa-exclamation-triangle"></i></span> Maximum number of ingredients reached! You can't add another one </p>
+            <% end %>
           </div>
         <% end %>
       </div>

@@ -1,9 +1,9 @@
 <div class="cocktail-form">
   <div class="cocktail-form">
       <%= simple_form_for(@cocktail) do |f| %>
-        <%= f.input :name, :label => 'Cocktail Name', :placeholder => "My Red berry Mojito" %>
+        <%= f.input :name, :label => 'Cocktail Name', :placeholder => "My Red berry Mojito", :input_html => { :maxlength => 15 } %>
         <%= f.association :category, :label => 'Choose a category', :selected => 1 %>
-        <%= f.input :description, :label => 'Cocktail Description', :placeholder => "With Raspberries, Lime and Mint.", :hint => 'Description is Optional!', :required => false %>
+        <%= f.input :description, :label => 'Cocktail Description', :placeholder => "With Raspberries, Lime and Mint.", :hint => 'Description is Optional! 300 characters Max', :required => false, :input_html => { :maxlength => 300 } %>
         <%= f.input :photo, as: :file, :hint => 'Max 1024x1024px - Better if square photo - Format: .jpeg, .jpg, .png' %>
         <hr>
         <%= f.button :submit, class: "btn" %>
