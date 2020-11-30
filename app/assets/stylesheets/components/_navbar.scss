@@ -43,31 +43,31 @@
 }
 
 
-@media (max-width: 540px) {
+@media (max-width: 420px) {
   .dropdown-menu-right {
     width: 100%;
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 420px) {
   .underline a:hover {
     border-bottom: none;
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 420px) {
   .nav-item p:hover {
     color: $main-color;
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 420px) {
   .dropdown-toggle {
     display: none;
   }
 }
 
-@media (min-width: 541px) {
+@media (min-width: 421px) {
   .mobile-display {
     display: none;
   }
