@@ -29,6 +29,12 @@
   padding-top: 16px;
 }
 
+@media (min-width: 820px) {
+  .search-wrapper {
+    width: 60%;
+  }
+}
+
 button.search {
   display: flex;
   justify-content: center;

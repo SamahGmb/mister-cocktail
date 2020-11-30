@@ -1,5 +1,18 @@
+.cocktail-form {
+  padding: 16px;
+  width: 800px;
+}
 
+
+@media (max-width: 820px) {
   .cocktail-form {
-    padding: 40px;
-    width: 800px;
+    width: 550px;
   }
+}
+
+@media (max-width: 420px) {
+  .cocktail-form {
+    width: 300px;
+  }
+}
+

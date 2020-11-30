@@ -21,6 +21,7 @@
   box-shadow: 2px 4px 4px 2px $shadow;
   border-radius: 8px;
   height: 100px;
+  width: 90%;
   margin: 16px 40px;
   display: flex;
   align-items: center;
@@ -291,7 +292,7 @@
 
 .random-cocktail-ingredients {
   width: 100%;
-  margin: 16px;
+  padding: 16px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
