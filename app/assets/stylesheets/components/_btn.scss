@@ -44,3 +44,17 @@
   font-size: 16px;
 }
 
+.cta {
+  background-color: $dark-grey;
+  border-radius: 8px;
+}
+
+.cta p {
+  color: $main-color;
+  padding: 0 16px;
+}
+
+.cta:hover {
+  background-color: $medium-grey;
+}
+

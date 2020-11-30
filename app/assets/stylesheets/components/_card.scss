@@ -50,7 +50,7 @@
 }
 
 .cocktail-card-name h3 {
-  padding-left: 100px;
+  padding-left: 120px;
 }
 
 .cocktail-card-name h3 a:hover {
@@ -180,7 +180,7 @@
 
 .cocktail-img {
   width: 50%;
-  background-color: $main-color;
+  background-color: rgba(254, 251, 1, 0.05)
 }
 
 @media (min-width: 960px) {

@@ -40,9 +40,11 @@
                   </div>
                   <div class="modal-body">
                     <% category.cocktails.each do |cocktail| %>
-                      <ul class="fa-ul">
-                        <p><li><span class="fa-li"><i class="fas fa-arrow-right"></i></span><%= link_to cocktail.name, cocktail_path(cocktail) %></li></p>
-                      </ul>
+                      <% if cocktail.user == @user %>
+                        <ul class="fa-ul">
+                          <p><li><span class="fa-li"><i class="fas fa-arrow-right"></i></span><%= link_to cocktail.name, cocktail_path(cocktail) %></li></p>
+                        </ul>
+                      <% end %>
                     <% end %>
                   </div>
                   <div class="modal-footer">
@@ -104,10 +106,10 @@
                 <% cocktail.doses.each do |dose| %>
                   <ul class="flex-center" >
                     <li class="cocktail-infos-igdts">
-                      <div>
+                      <div class="cocktail-dose" >
                         <span class="bold-text"> <%= dose.amount %> <%= dose.unit %></span>
                       </div>
-                      <div class="text-center">
+                      <div class="text-center cocktail-igdt-name ">
                         <%= dose.ingredient.name %>
                       </div>
                     </li>
@@ -116,7 +118,7 @@
               </div>
               <div class="random-cocktail-arrow" >
                 <%= link_to cocktail_path(cocktail) do %>
-                  <p>view recipe <i class="fas fa-chevron-circle-right"></i></p>
+                  <p class="bold-text" >view recipe <i class="fas fa-chevron-circle-right"></i></p>
                 <% end %>
               </div>
             </div>

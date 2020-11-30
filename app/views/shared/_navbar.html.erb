@@ -33,21 +33,22 @@
               <p class="bold-text" ><i class="fas fa-user-edit"></i>edit profile</p>
             <% end %>
           </li>
-          <li class="nav-item active underline">
-            <%= link_to destroy_user_session_path, class: "nav-link" do %>
-              <p class="bold-text" ><i class="fas fa-sign-out-alt"></i>sign out</p>
-            <% end %>
-          </li>
           <hr>
           <li class="nav-item active underline">
             <%= link_to contact_path, class: "nav-link" do %>
               <p class="bold-text" ><i class="fas fa-envelope"></i>contact</p>
             <% end %>
           </li>
+          <hr>
+          <li class="nav-item active underline">
+            <%= link_to destroy_user_session_path, method: :delete, class: "nav-link" do %>
+              <p class="bold-text" ><i class="fas fa-sign-out-alt"></i> sign out</p>
+            <% end %>
+          </li>
         <% else %>
           <li class="nav-item active underline">
-            <%= link_to new_user_session_path, class: "nav-link" do %>
-              <p class="bold-text" >sign in</p>
+            <%= link_to contact_path, class: "nav-link" do %>
+              <p class="bold-text" ><i class="fas fa-envelope"></i>contact</p>
             <% end %>
           </li>
         <% end %>
@@ -69,22 +70,22 @@
             </div>
             <hr>
             <div>
-              <%= link_to destroy_user_session_path, method: :delete, class: "dropdown-item" do %>
-                <p><i class="fas fa-sign-out-alt"></i> sign out</p>
-              <% end %>
-            </div>
-            <hr>
-            <div>
               <%= link_to contact_path, class: "dropdown-item" do %>
                 <p><i class="fas fa-envelope"></i>contact</p>
               <% end %>
             </div>
-
+            <hr>
+            <div>
+              <%= link_to destroy_user_session_path, method: :delete, class: "dropdown-item" do %>
+                <p><i class="fas fa-sign-out-alt"></i> sign out</p>
+              <% end %>
+            </div>
           </div>
         <% else %>
-          <li class="nav-item active underline">
+          <hr>
+          <li class="nav-item active cta">
             <%= link_to new_user_session_path, class: "nav-link" do %>
-              <p class="bold-text" >sign in</p>
+              <p class="bold-text  text-center" > sign in</p>
             <% end %>
           </li>
         <% end %>
@@ -93,4 +94,3 @@
   </div>
 
 </div>
-<div class="upper-bar" ><p><i class="fas fa-exclamation-triangle"></i>Alcohol abuse is dangerous for your health, alcoholic drinks should be consumed in moderation</p></div>
