@@ -19,7 +19,7 @@
   align-items: center;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 720px) {
   .home-page-img-btn {
     flex-wrap: wrap-reverse;
   }
@@ -42,12 +42,9 @@
   width: 400px;
 }
 
-.sign-in p {
-  letter-spacing: 0.1em;
-}
-
 .sign-in a {
   font-weight: bold;
+  padding: 0 4px;
 }
 
 .sign-in a:hover {
