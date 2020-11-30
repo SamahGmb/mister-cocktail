@@ -5,12 +5,12 @@
   border-radius: 8px;
   width: 350px;
   margin: 8px;
-  color: white;
+  color: $main-color;
 }
 
 .btn:hover, .back-prev-page:hover {
   background-color: $medium-grey;
-  color: white;
+  color: $main-color;
 }
 
 .btn button, .back-prev-page button {
@@ -19,7 +19,7 @@
 
 .btn button a, .back-prev-page button a {
   font-weight: bold;
-  color: white;
+  color: $main-color;
   font-size: 20px;
 }
 
@@ -34,13 +34,13 @@
   border-radius: 8px;
   width: 200px;
   margin: 8px;
-  color: white;
+  color: $main-color;
   display: flex;
   justify-content: center;
 }
 
 .back-prev-page button a {
-  color: white;
+  color: $main-color;
   font-size: 16px;
 }
 

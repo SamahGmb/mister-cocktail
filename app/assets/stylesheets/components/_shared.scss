@@ -159,16 +159,30 @@ button:focus {
   padding: 16px;
 }
 
-.devise-shared-links a:hover {
+.devise-shared-links a {
   color: white;
+  background-color: $medium-grey;
+  text-align: center;
+  padding: 16px 32px;
+  border-radius: 8px;
+  width: 250px;
+}
+
+.devise-shared-links a:hover {
+  background-color: $light-grey;
+  color: $dark-grey;
+}
+
+.back-devise a {
+  font-weight: bold;
 }
 
 .back-devise a:hover {
-  color: white;
+  color: $main-color;
 }
 
 .unhappy a:hover {
-  color: white;
+  color: $main-color;
 }
 
 .unhappy i {
