@@ -21,6 +21,10 @@
   width: 100%;
 }
 
+.call-me:hover, .email-me:hover, .follow-me:hover, .my-web-site:hover ,.my-work:hover {
+  transform: scale(1.03);
+}
+
 .contact-info i {
   font-size: 48px;
   padding: 16px;

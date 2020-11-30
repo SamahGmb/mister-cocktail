@@ -8,8 +8,20 @@
       <div>
         <h1 class="text-center"><%= @cocktail.name %></h1>
         <div class="prev-next" >
-          <%= link_to "<< Prev", @cocktail.prev %>
-          <%= link_to "Next >>", @cocktail.next %>
+          <div class="prev" >
+            <% if @cocktail.prev %>
+              <%= link_to @cocktail.prev do %>
+                <i class="fas fa-chevron-circle-left"></i>
+              <% end %>
+            <% end %>
+          </div>
+          <div class="next" >
+            <% if @cocktail.next %>
+              <%= link_to @cocktail.next do %>
+                <i class="fas fa-chevron-circle-right"></i>
+              <% end %>
+            <% end %>
+          </div>
         </div>
         <p><%= @cocktail.description %></p>
       </div>
@@ -78,8 +90,20 @@
         <% end %>
       </div>
       <div class="prev-next" >
-        <%= link_to "<< Prev", @cocktail.prev %>
-        <%= link_to "Next >>", @cocktail.next %>
+        <div class="prev" >
+          <% if @cocktail.prev %>
+            <%= link_to @cocktail.prev do %>
+              <i class="fas fa-chevron-circle-left"></i>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="next" >
+          <% if @cocktail.next %>
+            <%= link_to @cocktail.next do %>
+              <i class="fas fa-chevron-circle-right"></i>
+            <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
     <div class="cocktail-img" >

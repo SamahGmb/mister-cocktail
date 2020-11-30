@@ -13,14 +13,22 @@
   justify-content: center;
 }
 
+.cocktail-category:hover {
+  border-radius: 24px;
+}
+
 .cocktail-card {
   box-shadow: 2px 4px 4px 2px $shadow;
   border-radius: 8px;
   height: 100px;
-  margin: 16px 32px;
+  margin: 16px 40px;
   display: flex;
   align-items: center;
   background-color: white;
+}
+
+.cocktail-card:hover {
+  transform: scale(1.1, 1.1)
 }
 
 .cocktail-card img {
@@ -222,6 +230,14 @@
   color: $main-color;
 }
 
+.prev {
+  align-self: flex-start;
+}
+
+.next {
+  align-self: flex-end;
+}
+
 // Random Cocktail
 
 .random-cocktail-section {
@@ -301,8 +317,22 @@
   color: $main-color;
 }
 
-.random_cocktail-arrow {
+.random-cocktail-name:hover {
+  transform: scale(1.1, 1.1)
+}
+
+.random-ingdts-arrow {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+
+.random-cocktail-arrow i {
+  padding: 0 8px;
+}
+
+.random-cocktail-arrow p:hover {
+  color: $main-color;
+  transform: scale(1.1, 1.1)
 }
 
