@@ -76,11 +76,11 @@ html, body {
 
 .main {
   min-height: 100%;
-  margin-bottom: -100px;
+  margin-bottom: -120px;
 }
 
 .push, .home-push, .footer, .home-footer {
-  height: 100px;
+  height: 120px;
 }
 
 // Padding / Margin
@@ -155,8 +155,9 @@ button:focus {
 
 .devise-shared-links {
   display: flex;
-  flex-direction: column;
-  padding: 16px;
+  margin: 8px;
+  justify-content: center;
+
 }
 
 .devise-shared-links a {
@@ -164,6 +165,7 @@ button:focus {
   background-color: $medium-grey;
   text-align: center;
   padding: 16px 32px;
+  margin: 8px;
   border-radius: 8px;
   width: 250px;
 }
@@ -189,5 +191,8 @@ button:focus {
   padding: 0 16px;
 }
 
+.form-actions {
+  text-align: center;
+}
 
 
