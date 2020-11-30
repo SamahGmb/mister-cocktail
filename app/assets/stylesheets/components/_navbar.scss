@@ -1,3 +1,21 @@
+.upper-bar {
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+  background-color: #fefb01;
+}
+
+.upper-bar p {
+  padding: 0 40px;
+  font-size: 11px;
+  text-align: center;
+
+}
+
+.upper-bar i {
+  padding: 0 8px;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   background-color: #fefb01;

@@ -1,5 +1,13 @@
-.home-footer, .footer {
+.home-footer {
   background: linear-gradient( #3af901, #87fa00, #cefb02, #fefb01);
+}
+
+.home-push {
+  background: #3af901;
+}
+
+.footer {
+  background: rgba(254, 251, 1, 0.05);
 }
 
 .footer ul, .home-footer ul {
@@ -27,8 +35,17 @@
   color: $main-color;
 }
 
-.home-footer a:hover, .footer a:hover  {
+.home-footer a:hover  {
   color: white;
+}
+
+.footer a:hover  {
+  color: $main-color;
+}
+
+.home-footer i, .footer i {
+  color: red;
+  padding: 0 2px;
 }
 
 
