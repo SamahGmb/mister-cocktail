@@ -8,12 +8,6 @@
   width: 70%;
 }
 
-@media (max-width: 720px) {
- .contact-info {
-    width: 100%;
-  }
-}
-
 .call-me, .email-me, .follow-me, .my-web-site ,.my-work {
   display: flex;
   align-items: center;
@@ -43,12 +37,6 @@
   padding: 8px;
 }
 
-.space-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .contact-img {
   display: flex;
   justify-content: center;
@@ -56,12 +44,24 @@
 }
 
 .contact-img img {
-  height: 70%;
+  height: 60%;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 768px) {
   .contact-img {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+ .contact-info {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contact-img img {
+    height: 30%;
   }
 }
 
