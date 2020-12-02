@@ -47,6 +47,30 @@
   height: 60%;
 }
 
+@media (max-width: 1200px) {
+  .contact-img img {
+    height: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-info i {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-arrow i {
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 768px) {
   .contact-img {
     display: none;
@@ -59,11 +83,7 @@
   }
 }
 
-@media (max-width: 1200px) {
-  .contact-img img {
-    height: 30%;
-  }
-}
+
 
 
 
