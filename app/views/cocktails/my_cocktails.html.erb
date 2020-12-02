@@ -1,6 +1,6 @@
 <div class="banner radius-bottom ">
   <h1 class="text-center" >your cocktails</h1>
-  <p class="text-center" >tasty & delicious cocktails at home !</p>
+  <p class="text-center" >tasty & delicious cocktails at home</p>
 </div>
 <div class="wrapper">
   <div class="flex-center padding-section-index ">
@@ -12,7 +12,7 @@
     <% if @cocktails.empty? %>
     <div class="no-cocktail flex-center " >
       <%= image_tag "mascotte.svg" %>
-      <p class="text-center" >No cocktail created yet ! <br>  Let's create your first now ! </p>
+      <p class="text-center" >No cocktail created yet! <br>  Let's create your first now! </p>
     </div>
     <% else %>
       <div class="cocktails-cards">
@@ -31,15 +31,17 @@
               <div class="cocktail-card-name" >
                 <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
               </div>
-              <div>
-                <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
-                  <i class="far fa-trash-alt small-icone "></i>
-                <% end %>
-              </div>
-              <div>
-                <%= link_to edit_cocktail_path(cocktail) do %>
-                  <i class="far fa-edit"></i>
-                <% end %>
+              <div class="trash-edit" >
+                <div>
+                  <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
+                    <i class="far fa-trash-alt small-icone "></i>
+                  <% end %>
+                </div>
+                <div>
+                  <%= link_to edit_cocktail_path(cocktail) do %>
+                    <i class="far fa-edit"></i>
+                  <% end %>
+                </div>
               </div>
             </div>
           </div>

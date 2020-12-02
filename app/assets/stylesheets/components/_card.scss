@@ -74,7 +74,7 @@
 @media (max-width: 1200px) {
   .cocktail_card-img {
     position: absolute;
-    left: -10%;
+    left: -5%;
   }
 }
 
@@ -90,6 +90,26 @@
     margin: 16px;
     width: 90%;
   }
+}
+
+@media (max-width: 576px) {
+  .cocktail_card-img {
+    position: absolute;
+    left: -15%;
+  }
+}
+
+@media (max-width: 576px) {
+ .cocktail-card img {
+   height: 100px;
+   width: 100px;
+ }
+}
+
+@media (max-width: 576px) {
+ .cocktail-card-name h3 {
+   padding-left: 100px;
+ }
 }
 
 @media (max-width: 576px) {
@@ -180,6 +200,16 @@
 }
 
 @media (max-width: 1200px) {
+ .random-cocktail-infos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1200px) {
  .random-cocktail-photo {
     width: 50%;
   }
@@ -192,12 +222,12 @@
 }
 
 @media (max-width: 768px) {
- .random-cocktail-photo {
-    width: 100%;
+ .random-cocktail-ingredients {
+    padding: 0;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
  .random-cocktail-infos {
     width: 100%;
     display: flex;
@@ -206,6 +236,13 @@
     align-items: center;
   }
 }
+
+@media (max-width: 768px) {
+ .random-cocktail-photo {
+    width: 100%;
+  }
+}
+
 
 // My Cocktails
 
@@ -219,16 +256,22 @@
 
 .cocktail-name-trash {
   display: flex;
-  align-items: baseline;
+  align-items: center;
 }
 
 .cocktail-name-trash i {
-  padding-left: 16px;
   color: $medium-grey;
+  padding-left: 16px;
 }
 
 .cocktail-name-trash i:hover {
   color: $main-color;
+}
+
+@media (max-width: 992px) {
+  .no-cocktail img {
+    height: 100px;
+  }
 }
 
 // Show Card
@@ -261,18 +304,18 @@
 }
 
 .cocktail-dose {
-  font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .cocktail-igdt-name {
   font-size: 14px;
+  font-weight: bold;
   padding: 0 8px;
 }
 
 .warning i {
   color: red;
-  font-size: 24px;
+  font-size: 14px;
   padding: 0 8px;
 }
 
@@ -292,7 +335,8 @@
 
 .cocktail-img {
   width: 50%;
-  background-color: rgba(254, 251, 1, 0.05)
+  display: flex;
+  justify-content: center;
 }
 
 .cocktail-img img {
@@ -331,8 +375,8 @@
 
 @media (max-width: 1200px) {
   .cocktail-infos-igdts {
-    width: 85px;
-    height: 85px;
+    width: 90px;
+    height: 110px;
   }
 }
 
@@ -363,7 +407,17 @@
 
 @media (max-width: 1200px) {
   .cocktail-img img {
+    width: 50%;
+    border-radius: 40px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cocktail-img img {
+    width: 100%;
     border-radius: 0;
+    padding: 16px 0;
   }
 }
 
