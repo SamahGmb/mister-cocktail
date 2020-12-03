@@ -1,3 +1,5 @@
+// footer layout
+
 .home-footer {
   background: linear-gradient( #3af901, #87fa00, #cefb02, #fefb01);
 }
@@ -10,6 +12,37 @@
   background: rgba(254, 251, 1, 0.05);
 }
 
+.home-footer i, .footer i {
+  color: red;
+  padding: 0 8px;
+}
+
+// footer bar
+
+.footer-bar {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  background: $dark-grey;
+}
+
+.footer-bar p {
+  font-size: 14px;
+  text-align: center;
+  color: white;
+
+}
+
+.footer-bar i {
+  padding: 0 8px;
+}
+
+// footer list
+
+.footer-list {
+  padding: 8px 16px;
+}
+
 .footer ul, .home-footer ul {
   display: flex;
   justify-content: space-around;
@@ -18,8 +51,9 @@
 }
 
 .footer ul li, .home-footer ul li {
-  font-size: 12px;
+  font-size: 14px;
   color: $medium-grey;
+  padding: 8px;
 }
 
 .footer ul li::first-letter, .home-footer ul li::first-letter {
@@ -28,7 +62,7 @@
 
 .footer a, .home-footer a {
   font-weight: bold;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .footer a:hover, .home-footer a:hover {
@@ -43,29 +77,16 @@
   color: $main-color;
 }
 
-.home-footer i, .footer i {
-  color: red;
-  padding: 0 2px;
+@media (max-width: 768px) {
+  .footer ul, .home-footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.footer-bar {
-  display: flex;
-  justify-content: center;
-  padding-top: 8px;
-  background: $dark-grey;
-}
 
-.footer-bar p {
-  padding: 0 40px;
-  font-size: 11px;
-  text-align: center;
-  color: white;
 
-}
-
-.footer-bar i {
-  padding: 0 8px;
-}
 
 
 
