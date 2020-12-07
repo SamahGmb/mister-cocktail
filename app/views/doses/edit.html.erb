@@ -5,7 +5,7 @@
 <div class="wrapper">
   <div class="cocktail-form">
     <%= simple_form_for (@dose) do |f| %>
-      <%= f.association :ingredient, :label => 'Choose an Ingredient', :selected => 1, input_html: { class: 'select2' } %>
+      <%= f.association :ingredient, :label => 'Choose an Ingredient', :selected => 1, input_html: { class: 'select2' }, collection: Ingredient.order('name ASC') %>
       <%= f.input :amount %>
       <%= f.input :unit, collection: ['ml','slice','unit'], selected: 'ml' %>
       <hr>
